@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Софья Енькова](https://up.htmlacademy.ru/adaptive/28/user/2070743).
-* Наставник: `Неизвестно`.
+* Наставник: [Arthur Litovko](https://htmlacademy.ru/profile/id6927).
 
 ---
 

@@ -12,11 +12,18 @@
       <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны">
     </a>
     <ul class="form-header__navigation-list navigation-list">
-      <li class="navigation-list__item">Главная</li>
-      <li class="navigation-list__item">Фото и видео</li>
-      <li class="navigation-list__item">Форма отзыва</li>
-      <li class="navigation-list__item">Html academy</li>
+      <li class="navigation-list__item">
+        <a class="navigation-list__item-link" href="#">Главная<a>
+      </li>
+      <li class="navigation-list__item">
+        <a class="navigation-list__item-link" href="#">Фото и видео<a>
+      </li>
+      <li class="navigation-list__item navigation-list__item--current">Форма отзыва</li>
+      <li class="navigation-list__item">
+        <a class="navigation-list__item-link" href="https://htmlacademy.ru">Html academy</a>
+      </li>
     </ul>
+    <button class="form-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
   </header>
   <main class="feedback-main main">
     <section class="main__hero">
@@ -25,95 +32,99 @@
     <section class="main__form main-form">
       <h2 class="visually-hidden">Форма отзыва</h2>
       <h3 class="main-form__title">Оставьте свой отзыв</h3>
-      <p class="main-form__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами
+      <p class="main-form__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных
+        вами
         достопримечательностях</p>
       <form class="main-form__fieldsets fieldsets" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="fieldsets-item fieldset">
-          <legend class="fieldset-title">Представьтесь:</legend>
-          <ul class="fieldset-list">
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Имя*:
-                <input class="fieldset-input" type="text" name="name" id="name" placeholder="Пётр" required>
+        <fieldset class="fieldsets__item fieldset">
+          <legend class="fieldset__title">Представьтесь:</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Имя*:
+                <input class="fieldset__input" type="text" name="name" id="name" placeholder="Пётр" required>
               </label>
             </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Фамилия*:
-                <input class="fieldset-input" type="text" name="surname" id="surname" placeholder="Пустота" required>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Фамилия*:
+                <input class="fieldset__input" type="text" name="surname" id="surname" placeholder="Пустота" required>
               </label>
             </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Отчество:
-                <input class="fieldset-input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset class="fieldsets-item fieldset">
-          <legend class="fieldset-title">Контактная информация:</legend>
-          <ul class="fieldset-list">
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Контактный телефон*:
-                <input class="fieldset-input" type="tel" name="phone-number" id="phone-number" placeholder="Введите телефон" required>
-              </label>
-            </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Электронная почта*:
-                <input class="fieldset-input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail" required>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Отчество:
+                <input class="fieldset__input" type="text" name="patronymic" id="patronymic" placeholder="Викторович">
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="fieldsets-item fieldset">
-          <legend class="fieldset-title">Ваше общее впечатление:</legend>
-          <ul class="fieldset-list">
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Скорее положительное
-                <input class="fieldset-input" type="radio" name="opinion">
+        <fieldset class="fieldsets__item fieldset">
+          <legend class="fieldset__title">Контактная информация:</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Контактный телефон*:
+                <input class="fieldset__input" type="tel" name="phone-number" id="phone-number"
+                  placeholder="Введите телефон" required>
               </label>
             </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Скорее отрицательное
-                <input class="fieldset-input" type="radio" name="opinion">
-              </label>
-            </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Затрудняюсь ответить
-                <input class="fieldset-input" type="radio" name="opinion">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Электронная почта*:
+                <input class="fieldset__input" type="email" name="e-mail" id="e-mail" placeholder="Введите e-mail"
+                  required>
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="fieldsets-item fieldset">
-          <legend class="fieldset-title">Посещенные достопримечательности:</legend>
-          <ul class="fieldset-list">
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Мост Дьявола
-                <input class="fieldset-input" type="checkbox" name="bridge" checked>
+        <fieldset class="fieldsets__item fieldset">
+          <legend class="fieldset__title">Ваше общее впечатление:</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Скорее положительное
+                <input class="fieldset__input" type="radio" name="opinion">
               </label>
             </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Гора-Колокол
-                <input class="fieldset-input" type="checkbox" name="bell-mountain" checked>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Скорее отрицательное
+                <input class="fieldset__input" type="radio" name="opinion">
               </label>
             </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Слайд-парк
-                <input class="fieldset-input" type="checkbox" name="slide-park" checked>
-              </label>
-            </li>
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Красные скалы
-                <input class="fieldset-input" type="checkbox" name="red-rocks">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Затрудняюсь ответить
+                <input class="fieldset__input" type="radio" name="opinion">
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="fieldsets-item fieldset">
-          <legend class="fieldset-title">Опишите свои эмоции:</legend>
-          <ul class="fieldset-list">
-            <li class="fieldset-list-item">
-              <label class="fieldset-label">Мост Дьявола
-                <textarea class="fieldset__textarea" name="comment" id="comment-field" rows="6" placeholder="Опишите подробно все свои восторги"></textarea>
+        <fieldset class="fieldsets__item fieldset">
+          <legend class="fieldset__title">Посещенные достопримечательности:</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Мост Дьявола
+                <input class="fieldset__input" type="checkbox" name="bridge" checked>
+              </label>
+            </li>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Гора-Колокол
+                <input class="fieldset__input" type="checkbox" name="bell-mountain" checked>
+              </label>
+            </li>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Слайд-парк
+                <input class="fieldset__input" type="checkbox" name="slide-park" checked>
+              </label>
+            </li>
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Красные скалы
+                <input class="fieldset__input" type="checkbox" name="red-rocks">
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="fieldsets__item fieldset">
+          <legend class="fieldset__title">Опишите свои эмоции:</legend>
+          <ul class="fieldset__list">
+            <li class="fieldset__list-item">
+              <label class="fieldset__label">Мост Дьявола
+                <textarea class="fieldset__textarea" name="comment" id="comment-field" rows="6"
+                  placeholder="Опишите подробно все свои восторги"></textarea>
               </label>
             </li>
           </ul>

@@ -1,1 +1,11 @@
-// Начните писать стили здесь
+@use "blocks/global.scss";
+@use "blocks/fonts.scss";
+@use "blocks/main-header.scss";
+@use "blocks/main.scss";
+@use "blocks/page-footer.scss";
+@use "blocks/page.scss";
+@use "blocks/main__hero.scss";
+@use "blocks/catalog-header.scss";
+@use "blocks/catalog-main__hero.scss";
+@use "blocks/feedback-main__hero.scss";
+@use "blocks/body.scss";

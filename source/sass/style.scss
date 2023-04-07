@@ -1,11 +1,37 @@
-@use "blocks/global.scss";
-@use "blocks/fonts.scss";
-@use "blocks/main-header.scss";
-@use "blocks/main.scss";
-@use "blocks/page-footer.scss";
+@use "common/global.scss";
+@use "common/fonts.scss";
+
+//blocks
+
+//global
 @use "blocks/page.scss";
-@use "blocks/main__hero.scss";
-@use "blocks/catalog-header.scss";
-@use "blocks/catalog-main__hero.scss";
-@use "blocks/feedback-main__hero.scss";
 @use "blocks/body.scss";
+@use "blocks/footer.scss";
+@use "blocks/title.scss";
+@use "blocks/link.scss";
+@use "blocks/colored-block.scss";
+@use "blocks/button.scss";
+@use "blocks/submit.scss";
+@use "blocks/copyright.scss";
+@use "blocks/social-list.scss";
+@use "blocks/label.scss";
+@use "blocks/navigation-list.scss";
+@use "blocks/navigation-logo.scss";
+@use "blocks/hero.scss";
+//index
+@use "blocks/main.scss";
+@use "blocks/main-header.scss";
+@use "blocks/page-footer.scss";
+@use "blocks/map.scss";
+@use "blocks/booking.scss";
+@use "blocks/advantages.scss";
+//catalog
+@use "blocks/catalog-header.scss";
+@use "blocks/catalog-main.scss";
+@use "blocks/video.scss";
+@use "blocks/photo-gallery.scss";
+@use "blocks/photo.scss";
+//form
+@use "blocks/feedback-main.scss";
+@use "blocks/main-form.scss";
+@use "blocks/fieldset.scss";

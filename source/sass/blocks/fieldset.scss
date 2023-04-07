@@ -1,0 +1,60 @@
+.fieldset {
+  padding: 0;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: none;
+}
+
+.fieldset__input {
+  background-color: #eeeeee;
+  border: none;
+  padding: 16px 16px 16px 16px;
+
+  &::placeholder {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: hsla(0, 0%, 0%, 0.3);
+  }
+}
+
+.name::placeholder {
+  color: hsla(0, 0%, 0%, 1);
+  text-transform: none;
+}
+
+.fieldset__textarea {
+  background-color: #eeeeee;
+  border: none;
+
+  &::placeholder {
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    color: hsla(0, 0%, 0%, 0.3);
+  }
+}
+
+.fieldset__list {
+  padding: 0;
+}
+
+.fieldset__list-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  list-style: none;
+}
+
+.fieldset__label {
+  font-weight: 700;
+}
+
+.fieldset__title {
+  text-align: center;
+}
+
+
+

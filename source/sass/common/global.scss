@@ -11,14 +11,10 @@
   overflow: hidden;
 }
 
-.title {
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
+img {
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
 }
 
-.title-secondary {
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-}
+

@@ -1,0 +1,11 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  background-image: url("/img/index-background.jpg");
+  background-color: hsl(203, 48%, 67%);
+}
+
+.hero__logo {
+  margin-top: 50px;
+  margin-bottom: 85px;
+}

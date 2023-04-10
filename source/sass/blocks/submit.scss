@@ -1,0 +1,14 @@
+.submit {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.submit__button {
+  border: none;
+}
+
+.submit__small-text {
+  text-align: end;
+}

@@ -4,83 +4,99 @@
 <head>
   <meta charset="UTF-8">
   <title>Фото и видео</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="body">
   <header class="catalog-header">
-    <a class="catalog-header__navigation-logo navigation-logo" href="#">
+    <a class="catalog-header__navigation-logo navigation-logo" href="index.html">
       <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны">
     </a>
     <ul class="catalog-header__navigation-list navigation-list">
-      <li class="navigation-list__item">
-        <a class="navigation-list__item-link" href="#">Главная<a>
+      <li class="navigation-list__item title">
+        <a class="navigation-list__link link" href="index.html">Главная</a>
       </li>
-      <li class="navigation-list__item navigation-list__item--current">Фото и видео</li>
-      <li class="navigation-list__item">
-        <a class="navigation-list__item-link" href="#">Форма отзыва</a>
+      <li class="navigation-list__item title">
+        <a class="navigation-list__link link" href="#" aria-current="page">Фото и видео</a>
       </li>
-      <li class="navigation-list__item">
-        <a class="navigation-list__item-link" class="navigation-list__item-link" href="https://htmlacademy.ru">Html
+      <li class="navigation-list__item title">
+        <a class="navigation-list__link link" href="form.html">Форма отзыва</a>
+      </li>
+      <li class="navigation-list__item title">
+        <a class="navigation-list__link link" href="https://htmlacademy.ru">Html
           academy</a>
       </li>
     </ul>
     <button class="catalog-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
   </header>
-  <main class="main">
-    <section class="main__hero catalog-hero">
+  <main class="catalog-main">
+    <section class="catalog-main__hero hero">
       <h1 class="visually-hidden">Фото и видео галерея</h1>
+      <img src="img/sedona.svg" class="hero__logo" alt="Добро пожаловать в замечательный город Седона." width="229"
+        height="39">
     </section>
-    <section class="main__photo-gallery photo-gallery">
-      <h2 class="visually-hidden">Галерея</h2>
-      <h3 class="photo-gallery__title">Фото и видео</h3>
-      <p class="photo-gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть
-        о политике и экономике.</p>
+    <section class="catalog-main__photo-gallery photo-gallery">
+      <div class="photo-gallery__block">
+        <h3 class="photo-gallery__title title--secondary">Фото и видео</h3>
+        <p class="photo-gallery__description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам
+          забыть
+          о политике и экономике.</p>
+      </div>
       <ul class="photo-gallery__photo-list photo-list">
         <li class="photo-list__item photo">
           <img class="photo__item" src="img/catalog-photo-1.jpg"
-            alt="Вечерний пейзаж с широкой дорогой и движущимся автомобилем.">
+            alt="Вечерний пейзаж с широкой дорогой и движущимся автомобилем." width="280" height="280">
           <p class="photo__caption">Неродные просторы</p>
-          <p class="photo__caption-secondary caption">Автор фото:<span class="caption__author">Борис</span></p>
+          <p class="photo__caption--secondary caption">Автор фото:&nbsp;<span class="caption__author">Борис</span></p>
           <span class="photo__likes-number">1350</span>
         </li>
         <li class="photo-list__item photo">
           <img class="photo__item" src="img/catalog-photo-2.jpg" alt="кактусовидное растение с желтыми цветками.">
           <p class="photo__caption">Местная растительность</p>
-          <p class="photo__caption-secondary caption">Автор фото:<span class="caption__author">Сергей</span></p>
+          <p class="photo__caption--secondary caption">Автор фото:&nbsp;<span class="caption__author">Сергей</span></p>
           <span class="photo__likes-number">143</span>
         </li>
         <li class="photo-list__item photo">
           <img class="photo__item" src="img/catalog-photo-3.jpg" alt="две дороги, огибающие еловый лес на скале.">
           <p class="photo__caption">Дорога на север</p>
-          <p class="photo__caption-secondary caption">Автор фото:<span class="caption__author">Петр</span></p>
+          <p class="photo__caption--secondary caption">Автор фото:&nbsp;<span class="caption__author">Петр</span></p>
           <span class="photo__likes-number">96</span>
         </li>
         <li class="photo-list__item photo">
           <img class="photo__item" src="img/catalog-photo-4.jpg" alt="Каменный мост дьявола в Седоне.">
           <p class="photo__caption">Мост дьявола</p>
-          <p class="photo__caption-secondary caption">Автор фото:<span class="caption__author">Антон</span></p>
+          <p class="photo__caption--secondary caption">Автор фото:&nbsp;<span class="caption__author">Антон</span></p>
           <span class="photo__likes-number">254</span>
         </li>
       </ul>
     </section>
-    <section class="main__video video">
+    <section class="catalog-main__video video">
       <h2 class="visually-hidden">Видеопрезентация</h2>
-      <h3 class="video__title">Все еще сомневаетесь?</h3>
-      <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
-        раз!</p>
+      <div class="video__block">
+        <strong class="video__title title">Все еще сомневаетесь?</strong>
+        <p class="video__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной
+          раз!</p>
+      </div>
       <a class="video__play" href="#">
-        <img class="video__play-picture" src="img/video.jpg">
+        <img class="video__play-picture" src="img/video.jpg" alt="button">
       </a>
     </section>
   </main>
-  <footer class="page-footer">
-    <p class="page-footer__hashtag hashtag">#visitsedona</p>
-    <ul class="page-footer__social-list social-list">
-      <li class="social-list__item"><a href="#"></a></li>
-      <li class="social-list__item"><a href="#"></a></li>
-      <li class="social-list__item"><a href="#"></a></li>
+  <footer class="catalog-footer footer">
+    <p class="footer__hashtag title--secondary">#visitsedona</p>
+    <ul class="footer__social-list social-list">
+      <li class="social-list__item">VK<a href="#"></a></li>
+      <li class="social-list__item">Telegram<a href="#"></a></li>
+      <li class="social-list__item">Youtube<a href="#"></a></li>
     </ul>
-    <small class="page-footer__developed">Разработано</small>
+    <div class="page-footer__copyright copyright">
+      <small class="copyright__developed">Разработано</small>
+      <svg class="copyright__academy-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27"
+        height="35">
+        <path fill="#000000"
+          d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
+      </svg>
+    </div>
   </footer>
 </body>
 

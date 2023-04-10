@@ -1,0 +1,16 @@
+.photo {
+  list-style: none;
+}
+
+.photo__caption {
+  font-weight: 700;
+  margin: 0;
+
+  &--secondary {
+    text-transform: none;
+  }
+}
+
+.photo__likes-number {
+  font-weight: 700;
+}

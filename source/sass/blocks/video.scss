@@ -1,4 +1,12 @@
 .video__block {
-  padding: 17px 20px 38px 20px;
+  padding: 17px 0 38px 0;
   text-align: center;
+}
+
+.video__play {
+  display: flex;
+}
+
+.video__play-picture {
+  flex-grow: 1;
 }

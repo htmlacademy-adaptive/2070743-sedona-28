@@ -1,12 +1,35 @@
+@use "../common/mixins.scss";
+
 .advantages__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include mixins.list-reset;
+}
+
+.advantages__sublist {
+  @include mixins.list-reset;
+  padding: 23px 18px 46px 18px;
 }
 
 .advantages__item {
-  padding: 24px 18px 24px 18px;
   text-align: center;
+}
+
+.advantages__subitem {
+  text-align: center;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.advantages__item-city {
+  text-align: center;
+  padding: 54px 18px 40px 18px;
+}
+
+.advantages__item-bridge {
+  text-align: center;
+  padding: 37px 18px 37px 18px;
 }
 
 .advantages__title {
@@ -21,4 +44,13 @@
 .advantages__block {
   text-align: center;
   padding: 58px 18px 58px 18px;
+}
+
+.advantages__item-img {
+  text-align: center;
+  display: flex;
+}
+
+.advantages__img {
+  flex-grow: 1;
 }

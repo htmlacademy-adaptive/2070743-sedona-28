@@ -1,8 +1,14 @@
+@use "../common/mixins.scss";
+
 .social-list {
+  @include mixins.list-reset;
+  margin-bottom: 30px;
   display: flex;
-  list-style: none;
 }
 
 .social-list__item {
+  min-width: 48px;
+  min-height: 48px;
   margin-right: 6px;
+  background-color: hsla(203, 47%, 66%, 1);
 }

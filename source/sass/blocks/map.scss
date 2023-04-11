@@ -1,6 +1,9 @@
 .map {
   display: flex;
   justify-content: center;
+  background-image: url("/source/img/map-mobile.png");
+  background-repeat: no-repeat;
+  background-color: #000000;
 }
 
 .map__width {

@@ -1,4 +1,13 @@
+@use "../common/mixins.scss";
+
 .navigation-list {
+  @include mixins.list-reset;
   background-color: hsl(203, 47%, 66%);
-  list-style: none;
+  text-align: center;
+}
+
+.navigation-list__item {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  padding: 17px 0 12px 0;
 }

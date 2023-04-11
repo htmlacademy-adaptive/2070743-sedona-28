@@ -1,9 +1,12 @@
 @use "common/global.scss";
 @use "common/fonts.scss";
-
+@use "common/variables.scss";
+@use "common/visually-hidden.scss";
+@use "common/mixins.scss";
 //blocks
 
 //global
+@use "blocks/container.scss";
 @use "blocks/body.scss";
 @use "blocks/footer.scss";
 @use "blocks/title.scss";
@@ -30,4 +33,5 @@
 //form
 @use "blocks/feedback-main.scss";
 @use "blocks/main-form.scss";
+@use "blocks/fieldsets.scss";
 @use "blocks/fieldset.scss";

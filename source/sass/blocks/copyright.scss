@@ -1,8 +1,10 @@
-.copyright {
+.copyright__link {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .copyright__developed {
   display: block;
+  color: hsl(0, 0%, 0%);
 }

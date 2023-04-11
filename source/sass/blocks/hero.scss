@@ -1,7 +1,10 @@
 .hero {
   display: flex;
   justify-content: center;
-  background-image: url("/img/index-background.jpg");
+  background: url("../../img/back-mobile.jpg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: hsl(203, 48%, 67%);
 }
 

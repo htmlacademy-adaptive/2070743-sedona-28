@@ -1,5 +1,26 @@
+@use "../common/mixins.scss";
+
 .photo {
-  list-style: none;
+  margin-bottom: 25px;
+  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+}
+
+.photo-list {
+  @include mixins.list-reset;
+}
+
+.photo__item {
+  @include mixins.list-reset;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo__img {
+  flex-grow: 1;
+}
+
+.photo__figcaption {
+  margin: 15px 0 25px 0;
 }
 
 .photo__caption {
@@ -8,9 +29,23 @@
 
   &--secondary {
     text-transform: none;
+    margin: 11px 0;
   }
 }
 
 .photo__likes-number {
+  position: relative;
+  display: block;
+  margin-left: 37px;
   font-weight: 700;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -36px;
+    width: 23px;
+    height: 21px;
+    background: url("../img/like-icon.svg") no-repeat center;
+  }
 }

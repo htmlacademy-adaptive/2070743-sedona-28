@@ -1,4 +1,14 @@
 .main-form__block {
   padding: 36px 20px 28px 20px;
   text-align: center;
+  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+}
+
+.main-form__description {
+  margin: 0;
+}
+
+.main-form__title {
+  margin: 0;
+  margin-bottom: 24px;
 }

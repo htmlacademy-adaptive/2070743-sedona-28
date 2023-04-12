@@ -1,3 +1,5 @@
+@use "../common/variables.scss";
+
 .footer {
   display: flex;
   flex-direction: column;
@@ -8,4 +10,17 @@
 .footer__hashtag {
   margin: 0;
   margin-bottom: 30px;
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .footer__hashtag {
+    margin: 0;
+  }
 }

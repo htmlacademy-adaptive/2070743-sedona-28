@@ -1,7 +1,9 @@
+@use "../common/variables.scss";
+
 .hero {
   display: flex;
   justify-content: center;
-  background: url("../../img/back-mobile.jpg.jpg");
+  background: url("../img/back-mobile.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -11,4 +13,26 @@
 .hero__logo {
   margin-top: 50px;
   margin-bottom: 85px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .hero {
+    display: flex;
+    justify-content: center;
+    background: url("../img/back-desktop.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: hsl(203, 48%, 67%);
+  }
+
+  .hero__logo {
+    min-width: 461px;
+    min-height: 350px;
+
+    &--part {
+      min-width: 457px;
+      min-height: 78px;
+    }
+  }
 }

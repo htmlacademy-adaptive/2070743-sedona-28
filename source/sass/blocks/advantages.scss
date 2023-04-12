@@ -1,4 +1,5 @@
 @use "../common/mixins.scss";
+@use "../common/variables.scss";
 
 .advantages__list {
   @include mixins.list-reset;
@@ -22,12 +23,12 @@
   }
 }
 
-.advantages__item-city {
+.advantages__item--city {
   text-align: center;
   padding: 54px 18px 40px 18px;
 }
 
-.advantages__item-bridge {
+.advantages__item--bridge {
   text-align: center;
   padding: 37px 18px 37px 18px;
 }
@@ -46,11 +47,50 @@
   padding: 58px 18px 58px 18px;
 }
 
-.advantages__item-img {
+.advantages__item--img {
   text-align: center;
   display: flex;
 }
 
 .advantages__img {
   flex-grow: 1;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .advantages__list {
+    @include mixins.list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 256px);
+  }
+
+  .advantages__item {
+    text-align: center;
+    width: 256px;
+    min-height: 256px;
+
+    &--city {
+      width: 256px;
+      min-height: 256px;
+    }
+
+    &--bridge {
+      width: 256px;
+      min-height: 256px;
+    }
+
+    &--img {
+      width: 256px;
+      min-height: 256px;
+    }
+
+    .advantages__item--img {
+      width: 512px;
+    }
+
+    .advantages__sublist {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
 }

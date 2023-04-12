@@ -7,11 +7,16 @@
 
 .photo-list {
   @include mixins.list-reset;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .photo__item {
   @include mixins.list-reset;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -39,7 +44,7 @@
   margin-left: 37px;
   font-weight: 700;
 
-  &::before {
+  /* &::before {
     content: "";
     position: absolute;
     top: -4px;
@@ -48,4 +53,6 @@
     height: 21px;
     background: url("../img/like-icon.svg") no-repeat center;
   }
+  */
 }
+

@@ -1,3 +1,5 @@
+@use "../common/variables.scss";
+
 .colored-block {
   background-color: #81b3d2;
   color: #ffffff;
@@ -5,5 +7,20 @@
   &--secondary {
     background-color: #eeeeee;
     padding: 24px 0 24px 0;
+  }
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .colored-block {
+    background-color: #81b3d2;
+    color: #ffffff;
+
+    &--secondary {
+      background-color: #eeeeee;
+      padding: 24px 0 24px 0;
+      grid-column: 1/4;
+      grid-row: 3/4;
+    }
   }
 }

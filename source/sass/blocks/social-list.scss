@@ -1,8 +1,29 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
 .social-list {
+  @include mixins.list-reset;
+  margin-bottom: 30px;
   display: flex;
-  list-style: none;
 }
 
 .social-list__item {
+  width: 48px;
+  height: 48px;
   margin-right: 6px;
+  background-color: hsla(203, 47%, 66%, 1);
+}
+
+@media (min-width: variables.$tablet-width) {
+  .social-list {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 48px);
+    gap: 6px;
+    justify-content: center;
+  }
+
+  .social-list__item {
+    margin: 0;
+  }
 }

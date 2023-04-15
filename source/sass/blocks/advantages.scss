@@ -1,12 +1,26 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .advantages__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include mixins.list-reset;
+}
+
+.advantages__sublist {
+  @include mixins.list-reset;
+  padding: 23px 18px 46px 18px;
 }
 
 .advantages__item {
-  padding: 24px 18px 24px 18px;
   text-align: center;
+}
+
+.advantages__subitem {
+  text-align: center;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__title {
@@ -15,10 +29,72 @@
 
 .advantages__description {
   margin-top: 50px;
-  margin-bottom: 0;
+  margin-bottom: 40px;
 }
 
 .advantages__block {
   text-align: center;
   padding: 58px 18px 58px 18px;
+}
+
+.advantages__picture {
+  margin: 0;
+}
+
+.advantages__img {
+  width: 100%;
+  height: 100%;
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .advantages__list {
+    @include mixins.list-reset;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .advantages__item {
+    text-align: center;
+    padding: 0;
+
+    &--sub {
+      grid-column: 1/-1;
+    }
+  }
+
+  .advantages__sublist {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
+
+  .advantages__subitem {
+    margin: 170px 50px 0 50px;
+  }
+
+  .advantages__picture {
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .advantages__img {
+    grid-column-end: span 2;
+    width: 100%;
+    height: 100%;
+  }
+
+  .advantages__caption-block {
+    margin: 52px 50px 52px 50px;
+  }
+
+  .advantages__caption {
+    margin: 50px 52px 50px 51px;
+  }
+
+  .advantages__container {
+    grid-column: 1/-1;
+  }
 }

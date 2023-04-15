@@ -1,8 +1,22 @@
+@use "../common/variables.scss";
+
 .colored-block {
-  background-color: #81b3d2;
-  color: #ffffff;
+  padding: 24px 0 24px 0;
+
+  &--primary {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(203, 47%, 66%);
+  }
 
   &--secondary {
-    background-color: #eeeeee;
+    color: hsla(0, 0%, 0%, 1);
+    background-color: hsl(0, 0%, 93%);
+  }
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .colored-block--primary {
+    grid-column: 1/-1;
   }
 }

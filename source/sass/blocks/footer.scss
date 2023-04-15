@@ -1,5 +1,26 @@
+@use "../common/variables.scss";
+
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 33px 0 33px 0;
+}
+
+.footer__hashtag {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__hashtag {
+    margin: 0;
+    text-align: center;
+  }
 }

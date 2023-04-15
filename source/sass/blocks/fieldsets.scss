@@ -1,0 +1,12 @@
+@use "../common/variables.scss";
+
+.fieldsets__item--emotions {
+  display: flex;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .fieldsets__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

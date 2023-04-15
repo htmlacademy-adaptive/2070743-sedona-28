@@ -1,32 +1,31 @@
+@use "../common/variables.scss";
+
 .fieldset {
-  padding: 0;
-  margin-right: 20px;
-  margin-left: 20px;
+  padding: 20px;
   border: none;
 }
 
 .fieldset__input {
   background-color: #eeeeee;
   border: none;
-  padding: 16px 16px 16px 16px;
+  padding: 16px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: hsla(0, 0%, 0%, 0.3);
 
-  &::placeholder {
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 18px;
-    line-height: 26px;
-    font-weight: 700;
-    color: hsla(0, 0%, 0%, 0.3);
+  &--name {
+    color: hsla(0, 0%, 0%, 1);
   }
 }
 
-.name::placeholder {
-  color: hsla(0, 0%, 0%, 1);
-  text-transform: none;
-}
-
 .fieldset__textarea {
-  background-color: #eeeeee;
+  padding: 16px;
+  flex-grow: 1;
   border: none;
+  background-color: #eeeeee;
+
 
   &::placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
@@ -34,6 +33,7 @@
     line-height: 26px;
     font-weight: 700;
     color: hsla(0, 0%, 0%, 0.3);
+    margin: 16px;
   }
 }
 
@@ -53,5 +53,26 @@
 }
 
 .fieldset__title {
+  padding-top: 14px;
   text-align: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .fieldset {
+    padding: 0 60px 48px 60px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .fieldset__list--landmarks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  .fieldset__list--experience {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
 }

@@ -2,8 +2,13 @@
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
+  color: hsl(0, 0%, 20%);
   text-transform: uppercase;
   background-color: hsl(0, 0%, 100%);
   margin: 0 auto;
   min-width: 320px;
+  box-sizing: border-box;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }

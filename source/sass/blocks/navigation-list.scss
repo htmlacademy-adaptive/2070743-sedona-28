@@ -1,4 +1,39 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .navigation-list {
-  background-color: hsl(203, 47%, 66%);
-  list-style: none;
+  @include mixins.list-reset;
+  text-align: center;
+  padding-top: 56px;
+}
+
+.navigation-list__item {
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
+  padding: 17px 0 12px 0;
+  background-color: hsla(203, 47%, 66%, 1);
+}
+
+@media (min-width: variables.$tablet-width) {
+  .navigation-list {
+    @include mixins.list-reset;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    &::after {
+      content: "";
+      grid-column: 3/4;
+      grid-row: 1/4;
+    }
+  }
+
+  .navigation-list__item {
+    background-color: hsl(0, 0%, 100%);
+  }
+
+  .navigation-list__link {
+    margin: auto;
+    padding: 17px 0 12px 0;
+    max-width: 240px;
+  }
 }

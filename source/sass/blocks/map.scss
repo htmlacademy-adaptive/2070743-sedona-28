@@ -1,8 +1,21 @@
+@use "../common/variables.scss";
+
 .map {
   display: flex;
-  justify-content: center;
+  background: url("../img/map-mobile.png") no-repeat, center;
+  background-size: cover;
+  background-color: hsl(203, 47%, 66%);
+  min-height: 350px;
 }
 
 .map__width {
   flex-grow: 1;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .map {
+    background-image: url("../../img/map-tablet.png");
+    background-repeat: no-repeat;
+    background-color: hsl(203, 47%, 66%);
+  }
 }

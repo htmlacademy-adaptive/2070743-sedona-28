@@ -7,21 +7,24 @@
 
 .photo-list {
   @include mixins.list-reset;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+
+.photo-list__item {
+  &:first-child {
+    grid-column: 1/-1;
+  }
 }
 
 .photo__item {
   @include mixins.list-reset;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 .photo__img {
-  flex-grow: 1;
+  height: 100%;
+  width: 100%;
 }
 
 .photo__figcaption {

@@ -1,3 +1,5 @@
+@use "../common/variables.scss";
+
 .submit {
   display: flex;
   flex-direction: column;
@@ -7,8 +9,22 @@
 
 .submit__button {
   border: none;
+  min-width: 280px;
 }
 
 .submit__small-text {
   text-align: end;
 }
+
+@media (min-width: variables.$tablet-width) {
+  .submit {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px;
+  }
+
+  .submit__button {
+    max-width: 324px;
+  }
+}
+

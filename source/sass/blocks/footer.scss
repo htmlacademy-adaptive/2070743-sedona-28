@@ -15,12 +15,12 @@
 
 @media (min-width: variables.$tablet-width) {
   .footer {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer__hashtag {
     margin: 0;
+    text-align: center;
   }
 }

@@ -1,3 +1,5 @@
+@use "../common/variables.scss";
+
 .fieldset {
   padding: 20px;
   border: none;
@@ -53,4 +55,24 @@
 .fieldset__title {
   padding-top: 14px;
   text-align: center;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .fieldset {
+    padding: 0 60px 48px 60px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .fieldset__list--landmarks {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+  }
+
+  .fieldset__list--experience {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
 }

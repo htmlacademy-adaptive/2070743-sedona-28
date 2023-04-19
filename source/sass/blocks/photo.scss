@@ -1,7 +1,7 @@
 @use "../common/mixins.scss";
+@use "../common/variables.scss";
 
 .photo {
-  margin-bottom: 25px;
   border-bottom: 1px solid hsla(0, 0%, 90%, 1);
 }
 
@@ -25,36 +25,53 @@
 .photo__img {
   height: 100%;
   width: 100%;
+  vertical-align: middle;
 }
 
 .photo__figcaption {
-  margin: 15px 0 25px 0;
+  background-color: hsl(0, 0%, 95%);
+  padding: 22px 0 15px 0;
 }
 
 .photo__caption {
   font-weight: 700;
   margin: 0;
+  color: hsl(0, 0%, 0%);
 
   &--secondary {
     text-transform: none;
     margin: 11px 0;
+    color: hsl(0, 0%, 20%);
+    font-weight: 400;
   }
+}
+
+.photo__likes {
+  display: flex;
+  align-items: center;
 }
 
 .photo__likes-number {
   position: relative;
   display: block;
-  margin-left: 37px;
   font-weight: 700;
+}
 
-  /* &::before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -36px;
-    width: 23px;
-    height: 21px;
-    background: url("../img/like-icon.svg") no-repeat center;
+.photo__likes-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 31px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .photo__figcaption {
+    padding: 22px 20px 15px 20px;
+    display: flex;
+    justify-content: space-between;
   }
-  */
 }

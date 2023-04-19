@@ -57,9 +57,29 @@
   text-align: center;
 }
 
+.fieldset__list--experience {
+  text-transform: none;
+}
+
+.fieldset__list--landmarks {
+  text-transform: none;
+}
+
 @media (min-width: variables.$tablet-width) {
   .fieldset {
     padding: 0 60px 48px 60px;
+  }
+
+  .fieldset__list--experience {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+
+  .fieldset__list--landmarks {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
   }
 }
 

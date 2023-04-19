@@ -15,6 +15,7 @@
 }
 
 .advantages__subitem {
+  position: relative;
   text-align: center;
   margin-bottom: 25px;
 
@@ -27,9 +28,16 @@
   margin: 0;
 }
 
+.advantages__caption {
+  padding: 37px 18px 37px 18px;
+}
+
 .advantages__description {
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 16px;
+
+  &--indent {
+    margin-top: 60px;
+  }
 }
 
 .advantages__block {
@@ -44,8 +52,39 @@
 .advantages__img {
   width: 100%;
   height: 100%;
+  vertical-align: middle;
 }
 
+
+.advantages__subitem--house::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -50px;
+  width: 47px;
+  height: 47px;
+  background: url("../img/house.svg") no-repeat center;
+}
+
+.advantages__subitem--eat::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -50px;
+  width: 47px;
+  height: 47px;
+  background: url("../img/eat.svg") no-repeat center;
+}
+
+.advantages__subitem--souveniers::before {
+  content: "";
+  position: absolute;
+  top: -11px;
+  left: -50px;
+  width: 47px;
+  height: 47px;
+  background: url("../img/souveniers.svg") no-repeat center;
+}
 
 @media (min-width: variables.$tablet-width) {
   .advantages__list {
@@ -57,6 +96,7 @@
   .advantages__item {
     text-align: center;
     padding: 0;
+    min-width: 256px;
 
     &--sub {
       grid-column: 1/-1;
@@ -71,6 +111,7 @@
   }
 
   .advantages__subitem {
+    position: relative;
     margin: 170px 50px 0 50px;
   }
 
@@ -86,8 +127,21 @@
     height: 100%;
   }
 
+  .advantages__description {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .advantages__title {
+    margin: 0;
+    font-size: 21px;
+    line-height: 26px;
+  }
+
   .advantages__caption-block {
     margin: 52px 50px 52px 50px;
+    font-size: 21px;
+    line-height: 26px;
   }
 
   .advantages__caption {
@@ -96,5 +150,74 @@
 
   .advantages__container {
     grid-column: 1/-1;
+  }
+
+  .advantages__subitem--house::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 37%;
+    min-width: 77px;
+    min-height: 72px;
+    background: url("../img/house-tablet.svg") no-repeat center;
+  }
+
+  .advantages__subitem--eat::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 37%;
+    min-width: 80px;
+    min-height: 68px;
+    background: url("../img/eat-tablet.svg") no-repeat center;
+  }
+
+  .advantages__subitem--souveniers::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 37%;
+    min-width: 67px;
+    min-height: 75px;
+    background: url("../img/souveniers-tablet.svg") no-repeat center;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  .advantages__subitem {
+    text-align: left;
+    margin-left: 47px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .advantages__subitem--house::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 40%;
+    min-width: 79px;
+    min-height: 72px;
+    background: url("../img/house-desktop.svg") no-repeat center;
+  }
+
+  .advantages__subitem--eat::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 40%;
+    min-width: 73px;
+    min-height: 69px;
+    background: url("../img/eat-desktop.svg") no-repeat center;
+  }
+
+  .advantages__subitem--souveniers::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 40%;
+    min-width: 77px;
+    min-height: 75px;
+    background: url("../img/souveniers-desktop.svg") no-repeat center;
   }
 }

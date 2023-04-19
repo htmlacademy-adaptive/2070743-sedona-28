@@ -1,17 +1,25 @@
+@use "../common/variables.scss";
+
 .button {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 280px;
-  min-height: 58px;
   background-color: hsla(203, 47%, 66%, 1);
   color: hsla(0, 0%, 100%, 1);
   text-transform: uppercase;
 }
 
 .button__link {
+  min-width: 280px;
   display: block;
   text-decoration: none;
-  margin: 16px 49px 16px 49px;
+  padding: 16px 49px 16px 49px;
   color: hsla(0, 0%, 100%, 1);
+  cursor: pointer;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .button__link {
+    min-width: 458px;
+  }
 }

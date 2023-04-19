@@ -19,6 +19,28 @@
   .hero {
     display: flex;
     justify-content: center;
+    background: url("../img/back-tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: hsl(203, 48%, 67%);
+  }
+
+  .hero__logo {
+    min-width: 461px;
+    min-height: 350px;
+
+    &--part {
+      min-width: 457px;
+      min-height: 78px;
+    }
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .hero {
+    display: flex;
+    justify-content: center;
     background: url("../img/back-desktop.jpg");
     background-repeat: no-repeat;
     background-position: center;

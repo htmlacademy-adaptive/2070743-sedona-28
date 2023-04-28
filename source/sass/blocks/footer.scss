@@ -15,6 +15,7 @@
 
 @media (min-width: variables.$tablet-width) {
   .footer {
+    margin-top: 64px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }

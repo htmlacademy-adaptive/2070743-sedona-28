@@ -1,18 +1,45 @@
 @use "../common/mixins.scss";
 @use "../common/variables.scss";
 
-.navigation-list {
-  @include mixins.list-reset;
-  text-align: center;
-  padding-top: 56px;
-  position: relative;
-}
 
 .navigation-list__item {
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
   border-top: 1px solid hsla(0, 0%, 100%, 0.2);
   padding: 17px 0 12px 0;
-  background-color: hsla(203, 47%, 66%, 1);
+  background-color: hsl(203, 47%, 66%);
+}
+
+.navigation-list__item:hover {
+  background-color: hsl(203, 42%, 58%);
+}
+
+.navigation-list__item:active {
+  background-color: hsl(202, 44%, 54%);
+}
+
+.navigation-list__toggle {
+  z-index: 6;
+  position: absolute;
+  top: 71px;
+  right: 20px;
+  min-height: 20px;
+  min-width: 23px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.navigation-list__close-img {
+  cursor: pointer;
+  color: hsl(0, 0%, 100%);
+
+  &:hover {
+    color: hsl(0, 0%, 100%, 0.6);
+  }
+
+  &:active {
+    color: hsl(0, 0%, 100%, 0.3);
+  }
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -30,11 +57,20 @@
 
   .navigation-list__item {
     background-color: hsl(0, 0%, 100%);
+    border: none;
+  }
+
+  .navigation-list__item:hover {
+    background-color: hsl(0, 0%, 100%);
   }
 
   .navigation-list__link {
     margin: auto;
     padding: 17px 0 12px 0;
     max-width: 240px;
+  }
+
+  .navigation-list__toggle {
+    display: none;
   }
 }

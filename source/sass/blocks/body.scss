@@ -4,10 +4,10 @@
   line-height: 21px;
   color: hsl(0, 0%, 20%);
   text-transform: uppercase;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsla(0, 0%, 95%, 1);
   margin: 0 auto;
   min-width: 320px;
-  box-sizing: border-box;
+  max-width: 1200px;
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;

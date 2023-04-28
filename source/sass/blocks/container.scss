@@ -9,3 +9,9 @@
     padding: 0 60px;
   }
 }
+
+@media (min-width: variables.$desktop-width) {
+  .container {
+    padding: 0;
+  }
+}

@@ -8,6 +8,9 @@
 }
 
 .social-list__item {
+  display: grid;
+  justify-items: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   margin-right: 6px;
@@ -19,7 +22,6 @@
 }
 
 .social-list__icon {
-  padding: 12px;
   color: hsl(0, 0%, 100%);
 }
 

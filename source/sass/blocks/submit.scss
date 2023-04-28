@@ -10,6 +10,7 @@
 .submit__button {
   border: none;
   min-width: 280px;
+  min-height: 57px;
 }
 
 .submit__small-text {
@@ -24,6 +25,13 @@
   }
 
   .submit__button {
-    max-width: 324px;
+    min-width: 324px;
   }
 }
+
+@media (min-width: variables.$desktop-width) {
+  .submit__button {
+    min-width: 384px;
+  }
+}
+

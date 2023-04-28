@@ -1,9 +1,10 @@
 @use "../common/variables.scss";
 
 .colored-block {
-  padding: 24px 0 24px 0;
+  padding: 18px;
 
   &--primary {
+    padding: 0;
     color: hsl(0, 0%, 100%);
     background-color: hsl(203, 47%, 66%);
   }

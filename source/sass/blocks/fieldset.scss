@@ -3,6 +3,7 @@
 .fieldset {
   padding: 20px;
   border: none;
+  border-top: 1px solid hsl(0, 0%, 90%);
 }
 
 .fieldset__input {
@@ -42,37 +43,138 @@
 }
 
 .fieldset__list-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
   list-style: none;
+
+  &--phone::before {
+    content: "";
+    width: 58px;
+    height: 57px;
+    position: absolute;
+    top: 21px;
+    right: 0;
+    background-color: hsl(0, 0%, 90%);
+  }
+
+  &--mail::before {
+    content: "";
+    width: 58px;
+    height: 57px;
+    position: absolute;
+    top: 21px;
+    right: 0;
+    background-color: hsl(0, 0%, 90%);
+  }
 }
 
-.fieldset__label {
+.fieldset__list--experience {
+  display: grid;
+  justify-items: stretch;
+  gap: 16px;
   font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin-left: 62px;
+  text-transform: none;
+}
+
+
+.fieldset__list--experience .fieldset__input {
+  display: none;
+}
+
+.fieldset__list--landmarks {
+  display: grid;
+  justify-items: stretch;
+  gap: 16px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  margin-left: 62px;
+  text-transform: none;
+}
+
+.fieldset__list--landmarks .fieldset__input {
+  display: none;
+}
+
+.fieldset__mark:hover,
+.fieldset__label:hover .fieldset__mark {
+  background-color: hsla(0, 0%, 90%, 1);
+}
+
+.fieldset__mark:active,
+.fieldset__label:active .fieldset__mark {
+  background-color: hsla(0, 0%, 84%, 1);
+}
+
+.fieldset__mark {
+  position: absolute;
+  top: -10px;
+  left: -62px;
+  width: 46px;
+  height: 46px;
+  background-color: hsl(0, 0%, 95%);
+  border: none;
+  border-radius: 4px;
+
+  &--round {
+    border-radius: 50%;
+  }
 }
 
 .fieldset__title {
+  margin-bottom: 28px;
   padding-top: 14px;
   text-align: center;
+}
+
+.fieldset__input[type="checkbox"]:checked + .fieldset__mark::before,
+.fieldset__input[type="checkbox"]:checked + .fieldset__mark::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 12px;
+  width: 22px;
+  height: 16px;
+  background: url("../img/tick.svg") no-repeat center;
+}
+
+.fieldset__input[type="radio"]:checked + .fieldset__mark::before,
+.fieldset__input[type="radio"]:checked + .fieldset__mark::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  background-color: hsla(0, 0%, 20%, 1);
+  border-radius: 50%;
 }
 
 @media (min-width: variables.$tablet-width) {
   .fieldset {
     padding: 0 60px 48px 60px;
   }
+
+  .fieldset__list--experience {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fieldset__list--landmarks {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: variables.$desktop-width) {
   .fieldset__list--landmarks {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
   }
 
   .fieldset__list--experience {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
   }
 }

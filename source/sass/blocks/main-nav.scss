@@ -1,0 +1,148 @@
+@use "../common/variables.scss";
+@use "../common/mixins.scss";
+
+.main-nav {
+  position: relative;
+  width: auto;
+}
+
+.main-nav__list {
+  @include mixins.list-reset;
+  text-align: center;
+  padding-top: 56px;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav--closed .main-nav__toggle {
+  z-index: 5;
+  position: absolute;
+  top: 15px;
+  right: 17px;
+  display: block;
+  min-height: 25px;
+  min-width: 25px;
+  border: none;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 100%);
+
+  &::before {
+    content: "";
+    z-index: 6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 4px;
+    background-color: hsl(203, 47%, 66%);
+    box-shadow: 0 8px 0 0 hsl(203, 47%, 66%), 0 16px 0 0 hsl(203, 47%, 66%);
+  }
+
+  &:hover::before {
+    background-color: hsla(203, 47%, 66%, 0.6);
+    box-shadow:
+      0 8px 0 0 hsla(203, 47%, 66%, 0.6),
+      0 16px 0 0 hsla(203, 47%, 66%, 0.6);
+  }
+
+
+  &:active::before {
+    background-color: hsla(203, 47%, 66%, 0.3);
+    box-shadow:
+      0 8px 0 0 hsla(203, 47%, 66%, 0.3),
+      0 16px 0 0 hsla(203, 47%, 66%, 0.3);
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  min-height: 80vh;
+  width: 100%;
+  padding: 0;
+  transition: all 0.5s ease;
+}
+
+.main-nav--opened .main-nav__toggle {
+  display: block;
+  position: absolute;
+  top: 17px;
+  right: 35px;
+  background-color: transparent;
+  border: none;
+  min-width: 23px;
+  min-height: 22px;
+  z-index: 11;
+  transition: all 0.5s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 1px;
+    width: 23px;
+    height: 4px;
+    background-color: hsl(0, 0%, 100%);
+    transition: background-color 0.6s;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: hsla(0, 0%, 100%, 0.6);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: hsla(0, 0%, 100%, 0.3);
+  }
+}
+
+.main-nav--nojs .main-nav__list {
+  padding-top: 56px;
+  position: static;
+  min-height: 100%;
+  display: block;
+}
+
+.main-nav--nojs .main-nav__list-item {
+  display: block;
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-nav--closed .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    min-height: 56px;
+    transition: none;
+  }
+
+  .main-nav--opened .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (max-width: variables.$tablet-width) {
+  .main-nav--closed .navigation-list__item {
+    display: none;
+  }
+}

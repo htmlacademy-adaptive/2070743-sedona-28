@@ -8,10 +8,21 @@
 }
 
 .social-list__item {
+  display: grid;
+  justify-items: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   margin-right: 6px;
-  background-color: hsla(203, 47%, 66%, 1);
+  background-color: hsl(203, 47%, 66%);
+}
+
+.social-list__link {
+  display: block;
+}
+
+.social-list__icon {
+  color: hsl(0, 0%, 100%);
 }
 
 @media (min-width: variables.$tablet-width) {

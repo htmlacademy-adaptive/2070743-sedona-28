@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+.link:active {
+  color: hsla(0, 0%, 100%, 0.3);
+}
+
 
 @media (min-width: variables.$tablet-width) {
   .link {

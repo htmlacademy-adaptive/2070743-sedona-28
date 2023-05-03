@@ -27,6 +27,13 @@
   clip-path: polygon(0 100%, 0 0, 50% 100%, 100% 0%, 100% 100%);
 }
 
+@media (min-resolution: 2dppx) {
+  .hero {
+    background: url("../img/back-mobile@2x.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
 @media (min-width: variables.$tablet-width) {
   .hero {
     display: flex;
@@ -50,6 +57,13 @@
   .hero__decor::after {
     height: 57px;
     clip-path: polygon(0 100%, 0 15%, 10% 42%, 10% 0%, 50% 97%, 90% 0%, 90% 42%, 100% 15%, 100% 100%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background: url("../img/back-tablet@2x.jpg") no-repeat center;
+      background-size: cover;
+    }
   }
 }
 
@@ -76,5 +90,12 @@
 
   .hero__decor::after {
     clip-path: polygon(0 100%, 0 0, 21.2% 42%, 21.2% 0%, 50% 97%, 78.8% 0%, 78.8% 42%, 100% 0, 100% 100%);
+  }
+
+  @media (min-resolution: 2dppx) {
+    .hero {
+      background: url("../img/back-desktop@2x.jpg") no-repeat center;
+      background-size: cover;
+    }
   }
 }

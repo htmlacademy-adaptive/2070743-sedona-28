@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="body">
@@ -55,8 +58,12 @@
                 <p class="advantages__description advantages__description--indent">Седона — не аттракцион для туристов,
                   там течёт своя жизнь</p>
               </figcaption>
-              <img class="advantages__img" src="img/photo-1.jpg" alt="Здания города, окружённые цветущими растениями."
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-1-desktop.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-1-tablet.jpg 1x, img/photo-1-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/photo-1-mobile.jpg" srcset="img/photo-1-mobile@2x.jpg" alt="Здания города, окружённые цветущими растениями."
                 width="320" height="260">
+              </picture>
             </figure>
           </li>
           <li class="advantages__item advantages__item--sub">
@@ -83,8 +90,12 @@
                 <p class="advantages__description advantages__description--indent">Да, по нему можно пройти! Если вы
                   осмелитесь, конечно</p>
               </figcaption>
-              <img class="advantages__img" src="img/photo-2.jpg" alt="Каменный мост дьявола в Седоне." width="320"
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-2-desktop.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/photo-2-tablet.jpg 1x, img/photo-2-tablet@2x.jpg 2x">
+              <img class="advantages__img" src="img/photo-2-mobile.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Каменный мост дьявола в Седоне." width="320"
                 height="260">
+              </picture>
             </figure>
           </li>
           <li class="advantages__item colored-block colored-block--secondary">

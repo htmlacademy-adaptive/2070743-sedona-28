@@ -6,6 +6,16 @@
   text-decoration: none;
 }
 
+.copyright__link:hover > .copyright__developed,
+.copyright__link:hover > .copyright__academy-logo {
+  color: hsla(203, 47%, 66%, 1);
+}
+
+.copyright__link:active > .copyright__developed,
+.copyright__link:active > .copyright__academy-logo {
+  color: hsla(0, 0%, 70%, 1);
+}
+
 .copyright__developed {
   display: block;
   color: hsl(0, 0%, 0%);

@@ -14,10 +14,24 @@
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
-  color: hsla(0, 0%, 0%, 0.3);
+  color: hsla(0, 0%, 0%, 1);
 
-  &--name {
-    color: hsla(0, 0%, 0%, 1);
+  &--phone::placeholder,
+  &--email::placeholder {
+    color: hsla(0, 0%, 0%, 0.3);
+  }
+
+  &:hover {
+    background-color: hsla(0, 0%, 90%, 1);
+  }
+
+  &:active {
+    outline: 4px solid hsla(0, 0%, 90%, 1);
+  }
+
+  &:focus {
+    outline: 4px solid hsla(0, 0%, 90%, 1);
+    background-color: hsla(0, 0%, 100%, 1);
   }
 }
 
@@ -36,6 +50,19 @@
     color: hsla(0, 0%, 0%, 0.3);
     margin: 16px;
   }
+
+  &:hover {
+    background-color: hsla(0, 0%, 90%, 1);
+  }
+
+  &:active {
+    outline: 4px solid hsla(0, 0%, 90%, 1);
+  }
+
+  &:focus {
+    outline: 4px solid hsla(0, 0%, 90%, 1);
+    background-color: hsla(0, 0%, 100%, 1);
+  }
 }
 
 .fieldset__list {
@@ -52,21 +79,43 @@
   &--phone::before {
     content: "";
     width: 58px;
-    height: 57px;
+    height: 58px;
     position: absolute;
     top: 21px;
     right: 0;
     background-color: hsl(0, 0%, 90%);
   }
 
+  &--phone::after {
+    content: "";
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 18px;
+    height: 18px;
+    background: url("../img/phone.svg") no-repeat center;
+    z-index: 5;
+  }
+
   &--mail::before {
     content: "";
     width: 58px;
-    height: 57px;
+    height: 58px;
     position: absolute;
     top: 21px;
     right: 0;
     background-color: hsl(0, 0%, 90%);
+  }
+
+  &--mail::after {
+    content: "";
+    position: absolute;
+    top: 45px;
+    right: 20px;
+    width: 16px;
+    height: 12px;
+    background: url("../img/mail.svg") no-repeat center;
+    z-index: 5;
   }
 }
 

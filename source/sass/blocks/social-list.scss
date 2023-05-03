@@ -18,7 +18,20 @@
 }
 
 .social-list__link {
-  display: block;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  width: 48px;
+  height: 48px;
+}
+
+.social-list__link:hover {
+  background-color: hsla(203, 42%, 58%, 1);
+}
+
+.social-list__link:active {
+  color: hsla(0, 0%, 100%, 0.3);
+  background-color: hsla(202, 44%, 54%, 1);
 }
 
 .social-list__icon {

@@ -13,6 +13,7 @@
 
 .photo-list__item {
   background-color: hsl(0, 0%, 95%);
+
   &:first-child {
     grid-column: 1/-1;
   }

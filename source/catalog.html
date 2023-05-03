@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="body">
@@ -61,8 +64,15 @@
           <ul class="photo-gallery__photo-list photo-list">
             <li class="photo-list__item photo">
               <figure class="photo__item">
-                <img class="photo__img" src="img/catalog-photo-1.jpg"
-                  alt="Вечерний пейзаж с широкой дорогой и движущимся автомобилем." width="280" height="280">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/catalog-photo-1-desktop.jpg 1x, img/catalog-photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)"
+                    srcset="img/catalog-photo-1-tablet.jpg 1x, img/catalog-photo-1-tablet@2x.jpg 2x">
+                  <img class="photo__img" src="img/catalog-photo-1-mobile.jpg"
+                    srcset="img/catalog-photo-1-mobile@2x.jpg 2x"
+                    alt="Вечерний пейзаж с широкой дорогой и движущимся автомобилем." width="280" height="280">
+                </picture>
                 <figcaption class="photo__figcaption">
                   <div class="photo__captions">
                     <p class="photo__caption">Неродные просторы</p>
@@ -81,8 +91,16 @@
             </li>
             <li class="photo-list__item photo">
               <figure class="photo__item">
-                <img class="photo__img" src="img/catalog-photo-2.jpg" alt="кактусовидное растение с желтыми цветками."
-                  width="280" height="280">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/catalog-photo-2-desktop.jpg 1x, img/catalog-photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)"
+                    srcset="img/catalog-photo-2-tablet.jpg 1x, img/catalog-photo-2-tablet@2x.jpg 2x">
+                  <img class="photo__img" src="img/catalog-photo-2-mobile.jpg"
+                    srcset="img/catalog-photo-2-mobile@2x.jpg 2x" alt="кактусовидное растение с желтыми цветками."
+                    width="280" height="280">
+                </picture>
+
                 <figcaption class="photo__figcaption">
                   <div class="photo__captions">
                     <p class="photo__caption">Местная растительность</p>
@@ -101,8 +119,15 @@
             </li>
             <li class="photo-list__item photo">
               <figure class="photo__item">
-                <img class="photo__img" src="img/catalog-photo-3.jpg" alt="две дороги, огибающие еловый лес на скале."
-                  width="280" height="280">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/catalog-photo-3-desktop.jpg 1x, img/catalog-photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)"
+                    srcset="img/catalog-photo-3-tablet.jpg 1x, img/catalog-photo-3-tablet@2x.jpg 2x">
+                  <img class="photo__img" src="img/catalog-photo-3-mobile.jpg"
+                    srcset="img/catalog-photo-3-mobile@2x.jpg 2x" alt="две дороги, огибающие еловый лес на скале."
+                    width="280" height="280">
+                </picture>
                 <figcaption class="photo__figcaption">
                   <div class="photo__captions">
                     <p class="photo__caption">Дорога на север</p>
@@ -120,8 +145,15 @@
             </li>
             <li class="photo-list__item photo">
               <figure class="photo__item">
-                <img class="photo__img" src="img/catalog-photo-4.jpg" alt="Каменный мост дьявола в Седоне." width="280"
-                  height="280">
+                <picture>
+                  <source media="(min-width:1200px)"
+                    srcset="img/catalog-photo-4-desktop.jpg 1x, img/catalog-photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width:768px)"
+                    srcset="img/catalog-photo-4-tablet.jpg 1x, img/catalog-photo-4-tablet@2x.jpg 2x">
+                  <img class="photo__img" src="img/catalog-photo-4-mobile.jpg"
+                    srcset="img/catalog-photo-4-mobile@2x.jpg 2x" alt="Каменный мост дьявола в Седоне." width="280"
+                    height="280">
+                </picture>
                 <figcaption class="photo__figcaption">
                   <div class="photo__captions">
                     <p class="photo__caption">Мост дьявола</p>

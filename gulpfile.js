@@ -77,7 +77,7 @@ done();
 }
 
 //Clean
-const clean = () => {
+export const clean = () => {
   return del('build');
 };
 
@@ -131,5 +131,5 @@ export default gulp.series(
 );
 
 gulp.series(
-server, watcher
+clean, server, watcher
 );

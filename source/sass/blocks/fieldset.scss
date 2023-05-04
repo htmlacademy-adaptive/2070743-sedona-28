@@ -3,7 +3,7 @@
 .fieldset {
   padding: 20px;
   border: none;
-  border-top: 1px solid hsl(0, 0%, 90%);
+  border-bottom: 1px solid hsla(0, 0%, 86%, 1);
 }
 
 .fieldset__input {
@@ -205,8 +205,18 @@
 }
 
 @media (min-width: variables.$tablet-width) {
+  .fieldsets__container > .fieldset {
+    border-top: none;
+  }
+
   .fieldset {
     padding: 0 60px 48px 60px;
+    border-top: 1px solid hsla(0, 0%, 86%, 1);
+    border-bottom: none;
+
+    &:first-child {
+      border-right: 1px solid hsl(0, 0%, 86%);
+    }
   }
 
   .fieldset__list--experience {

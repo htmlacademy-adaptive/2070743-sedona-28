@@ -51,6 +51,12 @@
   margin: 0;
 }
 
+.advantages picture {
+  grid-column-end: span 2;
+  width: 100%;
+  height: 100%;
+}
+
 .advantages__img {
   width: 100%;
   height: 100%;
@@ -121,12 +127,6 @@
     margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .advantages__img {
-    grid-column-end: span 2;
-    width: 100%;
-    height: 100%;
   }
 
   .advantages__description {

@@ -71,7 +71,7 @@
   left: -50px;
   width: 47px;
   height: 47px;
-  background: url("../img/house.svg") no-repeat center;
+  background: url("../img/advantages.svg#house") no-repeat center;
 }
 
 .advantages__subitem--eat::before {
@@ -81,7 +81,7 @@
   left: -50px;
   width: 47px;
   height: 47px;
-  background: url("../img/eat.svg") no-repeat center;
+  background: url("../img/advantages.svg#eat") no-repeat center;
 }
 
 .advantages__subitem--souveniers::before {
@@ -91,7 +91,7 @@
   left: -50px;
   width: 47px;
   height: 47px;
-  background: url("../img/souveniers.svg") no-repeat center;
+  background: url("../img/advantages.svg#souveniers") no-repeat center;
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -161,7 +161,7 @@
     left: 37%;
     min-width: 77px;
     min-height: 72px;
-    background: url("../img/house-tablet.svg") no-repeat center;
+
   }
 
   .advantages__subitem--eat::before {
@@ -171,7 +171,7 @@
     left: 37%;
     min-width: 80px;
     min-height: 68px;
-    background: url("../img/eat-tablet.svg") no-repeat center;
+
   }
 
   .advantages__subitem--souveniers::before {
@@ -181,7 +181,7 @@
     left: 37%;
     min-width: 67px;
     min-height: 75px;
-    background: url("../img/souveniers-tablet.svg") no-repeat center;
+
   }
 }
 
@@ -200,7 +200,6 @@
     left: 40%;
     min-width: 79px;
     min-height: 72px;
-    background: url("../img/house-desktop.svg") no-repeat center;
   }
 
   .advantages__subitem--eat::before {
@@ -210,7 +209,6 @@
     left: 40%;
     min-width: 73px;
     min-height: 69px;
-    background: url("../img/eat-desktop.svg") no-repeat center;
   }
 
   .advantages__subitem--souveniers::before {
@@ -220,6 +218,5 @@
     left: 40%;
     min-width: 77px;
     min-height: 75px;
-    background: url("../img/souveniers-desktop.svg") no-repeat center;
   }
 }

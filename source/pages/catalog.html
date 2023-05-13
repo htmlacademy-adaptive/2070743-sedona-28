@@ -27,7 +27,8 @@
             <a class="navigation-list__link link" href="index.html">Главная</a>
           </li>
           <li class="navigation-list__item title">
-            <a class="navigation-list__link navigation-list__link--current link" href="#" aria-current="page">Фото и видео</a>
+            <a class="navigation-list__link navigation-list__link--current link" href="#" aria-current="page">Фото и
+              видео</a>
           </li>
           <li class="navigation-list__item title">
             <a class="navigation-list__link link" href="form.html">Форма отзыва</a>
@@ -58,10 +59,21 @@
             <li class="photo-list__item photo">
               <figure class="photo__item">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/catalog-photo-1-mobile.webp 1x, img/catalog-photo-1-mobile@2x.webp 2x" width="1200"
+                    height="400">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog-photo-1-mobile.webp 1x, img/catalog-photo-1-mobile@2x.webp 2x" width="648"
+                    height="400">
+                  <source type="image/webp"
+                    srcset="img/catalog-photo-1-mobile.webp 1x, img/catalog-photo-1-mobile@2x.webp 2x" width="280"
+                    height="280">
                   <source media="(min-width:1200px)"
-                    srcset="img/catalog-photo-1-desktop.jpg 1x, img/catalog-photo-1-desktop@2x.jpg 2x">
+                    srcset="img/catalog-photo-1-desktop.jpg 1x, img/catalog-photo-1-desktop@2x.jpg 2x" width="1200"
+                    height="400">
                   <source media="(min-width:768px)"
-                    srcset="img/catalog-photo-1-tablet.jpg 1x, img/catalog-photo-1-tablet@2x.jpg 2x">
+                    srcset="img/catalog-photo-1-tablet.jpg 1x, img/catalog-photo-1-tablet@2x.jpg 2x" width="648"
+                    height="400">
                   <img class="photo__img" src="img/catalog-photo-1-mobile.jpg"
                     srcset="img/catalog-photo-1-mobile@2x.jpg 2x"
                     alt="Вечерний пейзаж с широкой дорогой и движущимся автомобилем." width="280" height="280">
@@ -85,6 +97,15 @@
             <li class="photo-list__item photo">
               <figure class="photo__item">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/catalog-photo-2-mobile.webp 1x, img/catalog-photo-2-mobile@2x.webp 2x" width="1200"
+                    height="400">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog-photo-2-mobile.webp 1x, img/catalog-photo-2-mobile@2x.webp 2x" width="648"
+                    height="400">
+                  <source type="image/webp"
+                    srcset="img/catalog-photo-2-mobile.webp 1x, img/catalog-photo-2-mobile@2x.webp 2x" width="280"
+                    height="280">
                   <source media="(min-width:1200px)"
                     srcset="img/catalog-photo-2-desktop.jpg 1x, img/catalog-photo-2-desktop@2x.jpg 2x">
                   <source media="(min-width:768px)"
@@ -113,6 +134,15 @@
             <li class="photo-list__item photo">
               <figure class="photo__item">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/catalog-photo-3-mobile.webp 1x, img/catalog-photo-3-mobile@2x.webp 2x" width="1200"
+                    height="400">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog-photo-3-mobile.webp 1x, img/catalog-photo-3-mobile@2x.webp 2x" width="648"
+                    height="400">
+                  <source type="image/webp"
+                    srcset="img/catalog-photo-3-mobile.webp 1x, img/catalog-photo-3-mobile@2x.webp 2x" width="280"
+                    height="280">
                   <source media="(min-width:1200px)"
                     srcset="img/catalog-photo-3-desktop.jpg 1x, img/catalog-photo-3-desktop@2x.jpg 2x">
                   <source media="(min-width:768px)"
@@ -139,6 +169,15 @@
             <li class="photo-list__item photo">
               <figure class="photo__item">
                 <picture>
+                  <source type="image/webp" media="(min-width: 1200px)"
+                    srcset="img/catalog-photo-4-mobile.webp 1x, img/catalog-photo-4-mobile@2x.webp 2x" width="1200"
+                    height="400">
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/catalog-photo-4-mobile.webp 1x, img/catalog-photo-4-mobile@2x.webp 2x" width="648"
+                    height="400">
+                  <source type="image/webp"
+                    srcset="img/catalog-photo-4-mobile.webp 1x, img/catalog-photo-4-mobile@2x.webp 2x" width="280"
+                    height="280">
                   <source media="(min-width:1200px)"
                     srcset="img/catalog-photo-4-desktop.jpg 1x, img/catalog-photo-4-desktop@2x.jpg 2x">
                   <source media="(min-width:768px)"
@@ -186,27 +225,27 @@
           <li class="social-list__item">
             <a class="social-list__link" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">VK</span>
-              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img" aria-label="группа html academy во вконтакте"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#vk-icon"></use>
+              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img"
+                aria-label="группа html academy во вконтакте" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/socials.svg#vk-logo"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Telegram</span>
-              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img" aria-label="канал html academy в telegram"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#tg-icon"></use>
+              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img"
+                aria-label="канал html academy в telegram" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/socials.svg#telegram-logo"></use>
               </svg>
             </a>
           </li>
           <li class="social-list__item">
             <a class="social-list__link" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
-              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img" aria-label="канал html academy на youtube"
-                xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#yt-icon"></use>
+              <svg class="social-list__icon" width="25" height="24" viewBox="0 0 25 24" fill="none" role="img"
+                aria-label="канал html academy на youtube" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/socials.svg#youtube-logo"></use>
               </svg>
             </a>
           </li>
@@ -216,14 +255,14 @@
             <small class="copyright__developed">Разработано</small>
             <svg class="copyright__academy-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27"
               height="35" role="img" focusable="false" aria-label="логотип htmlacademy">
-              <use xlink:href="img/sprite.svg#academy-logo"></use>
+              <use xlink:href="img/socials.svg#htmlacademy"></use>
             </svg>
           </a>
         </div>
       </footer>
     </div>
   </div>
-  <script src="menu.js"></script>
+  <script src="js/menu.js"></script>
 
 </body>
 

@@ -68,6 +68,18 @@
     margin: auto;
     padding: 17px 0 12px 0;
     max-width: 240px;
+
+    &:hover {
+      color: hsla(203, 47%, 66%, 1);
+    }
+
+    &:active {
+      color: hsla(0, 0%, 70%, 1);
+    }
+
+    &--current {
+      color: hsla(23, 15%, 40%, 1);
+    }
   }
 
   .navigation-list__toggle {

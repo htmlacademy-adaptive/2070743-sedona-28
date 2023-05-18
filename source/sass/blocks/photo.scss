@@ -2,17 +2,18 @@
 @use "../common/variables.scss";
 
 .photo {
-  border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+  border-bottom: 1px solid hsl(0deg 0% 90% / 100%);
 }
 
 .photo-list {
   @include mixins.list-reset;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 
 .photo-list__item {
-  background-color: hsl(0, 0%, 95%);
+  background-color: hsl(0deg 0% 95%);
 
   &:first-child {
     grid-column: 1/-1;
@@ -30,18 +31,18 @@
 }
 
 .photo__figcaption {
-  padding: 22px 0 15px 0;
+  padding: 22px 0 15px;
 }
 
 .photo__caption {
   font-weight: 700;
   margin: 0;
-  color: hsl(0, 0%, 0%);
+  color: hsl(0deg 0% 0%);
 
   &--secondary {
     text-transform: none;
     margin: 11px 0;
-    color: hsl(0, 0%, 20%);
+    color: hsl(0deg 0% 20%);
     font-weight: 400;
   }
 }
@@ -69,15 +70,20 @@
   background-color: transparent;
 }
 
+.photo__like {
+  color: #000000;
+  opacity: 0.3;
+}
+
 @media (min-width: variables.$tablet-width) {
   .photo__figcaption {
-    padding: 22px 20px 15px 20px;
+    padding: 22px 20px 15px;
     display: flex;
     justify-content: space-between;
   }
 
   .photo-list__item:nth-child(2n+3) {
-    background-color: hsl(0, 0%, 92%);
+    background-color: hsl(0deg 0% 92%);
   }
 }
 
@@ -90,16 +96,17 @@
     position: absolute;
     bottom: 1px;
     left: 0;
-    background-color: hsla(0, 0%, 0%, 0.3);
-    color: hsla(0, 0%, 100%, 1);
+    background-color: hsl(0deg 0% 0% / 30%);
+    color: hsl(0deg 0% 100% / 100%);
     width: 100%;
   }
 
   .photo__caption {
-    color: hsla(0, 0%, 100%, 1);
+    color: hsl(0deg 0% 100% / 100%);
   }
 
   .photo__like {
-    fill: hsl(0, 0%, 100%);
+    color: #ffffff;
+    opacity: 1;
   }
 }

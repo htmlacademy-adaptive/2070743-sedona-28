@@ -1,3 +1,4 @@
+@use "../common/mixins.scss";
 @use "../common/variables.scss";
 
 .copyright__link {
@@ -8,25 +9,45 @@
 
 .copyright__link:hover > .copyright__developed,
 .copyright__link:hover > .copyright__academy-logo {
-  color: hsla(203, 47%, 66%, 1);
+  color: hsl(203deg 47% 66% / 100%);
 }
 
 .copyright__link:active > .copyright__developed,
 .copyright__link:active > .copyright__academy-logo {
-  color: hsla(0, 0%, 70%, 1);
+  color: hsl(0deg 0% 70% / 100%);
 }
 
 .copyright__developed {
   display: block;
-  color: hsl(0, 0%, 0%);
+  color: hsl(0deg 0% 0%);
+  font-size: 14px;
+  margin-right: 6px;
+  margin-left: 7px;
 }
 
 .copyright__academy-logo {
-  color: hsl(0, 0%, 0%);
+  color: hsl(0deg 0% 0%);
+}
+
+.copyright__academy-logo {
+  width: 42px;
+  height: 46px;
 }
 
 @media (min-width: variables.$tablet-width) {
   .copyright__link {
     justify-content: center;
+  }
+
+  .copyright__developed {
+    margin-right: 3px;
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .copyright__developed {
+    margin-right: 5px;
+    margin-left: 40px;
   }
 }

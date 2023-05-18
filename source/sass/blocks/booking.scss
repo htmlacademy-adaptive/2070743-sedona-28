@@ -1,7 +1,36 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .booking {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 38px 18px 49px 18px;
+  padding: 43px 18px 47px;
+}
+
+.booking__description {
+  margin: 17px 0 33px;
+  max-width: 435px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .booking {
+    padding: 58px 18px 49px;
+  }
+
+.booking__description {
+  margin: 32px 0 45px;
+  max-width: 435px;
+}
+
+.booking__title {
+  font-size: 30px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .booking {
+    padding: 52px 18px 49px;
+  }
 }

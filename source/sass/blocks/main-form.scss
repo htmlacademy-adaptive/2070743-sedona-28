@@ -1,7 +1,10 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .main-form__block {
   margin: 0 auto;
   max-width: 436px;
-  padding: 36px 20px 28px 20px;
+  padding: 36px 20px 28px;
   text-align: center;
 }
 
@@ -12,4 +15,28 @@
 .main-form__title {
   margin: 0;
   margin-bottom: 24px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .main-form__title {
+    font-size: 30px;
+    margin-top: 23px;
+    margin-bottom: 21px;
+  }
+
+  .main-form__block {
+    max-width: 477px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .main-form__title {
+    font-size: 30px;
+    margin-top: 23px;
+    margin-bottom: 32px;
+  }
+
+  .main-form__block {
+    padding: 89px 20px 0px;
+  }
 }

@@ -1,11 +1,14 @@
+//global
+
 @use "common/global.scss";
 @use "common/fonts.scss";
 @use "common/variables.scss";
 @use "common/visually-hidden.scss";
 @use "common/mixins.scss";
+
 //blocks
 
-//global
+@use "blocks/page.scss";
 @use "blocks/layout.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/header.scss";
@@ -23,17 +26,21 @@
 @use "blocks/navigation-list.scss";
 @use "blocks/navigation-logo.scss";
 @use "blocks/hero.scss";
+
 //index
 @use "blocks/map.scss";
 @use "blocks/booking.scss";
 @use "blocks/advantages.scss";
+
 //catalog
 @use "blocks/catalog-main.scss";
 @use "blocks/video.scss";
 @use "blocks/photo-gallery.scss";
 @use "blocks/photo.scss";
+
 //form
 @use "blocks/feedback-main.scss";
 @use "blocks/main-form.scss";
 @use "blocks/fieldsets.scss";
 @use "blocks/fieldset.scss";
+@use "blocks/form-footer.scss";

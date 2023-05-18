@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>Форма отзыва</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="body">
-  <div class="layout">
+<body class="body layout">
     <header class="header">
       <a class="navigation-logo" href="index.html">
-        <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны">
+        <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны" width="185" height="96">
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="открыть меню"></button>
@@ -39,7 +40,7 @@
     <main class="feedback-main main">
       <section class="feedback-main__hero hero">
         <h1 class="visually-hidden">Оставьте свой отзыв о Седоне</h1>
-        <img src="img/sedona.svg" class="hero__logo hero__logo--part"
+        <img src="img/sedona.svg" class="hero__logo hero__logo--part hero__logo--part-form"
           alt="Добро пожаловать в замечательный город Седона." width="229" height="39">
         <div class="hero__decor"></div>
       </section>
@@ -88,7 +89,7 @@
               </ul>
             </fieldset>
           </div>
-          <fieldset class="fieldsets__item fieldset">
+          <fieldset class="fieldsets__item fieldset fieldset--experience">
             <legend class="fieldset__title title">Ваше общее впечатление:</legend>
             <ul class="fieldset__list fieldset__list--experience">
               <li class="fieldset__list-item">
@@ -111,8 +112,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="fieldsets__item fieldset">
-            <legend class="fieldset__title title">Посещенные достопримечательности:</legend>
+          <fieldset class="fieldsets__item fieldset fieldset--landmarks">
+            <legend class="fieldset__title title">Посещенные<br>достопримечательности:</legend>
             <ul class="fieldset__list fieldset__list--landmarks">
               <li class="fieldset__list-item">
                 <label class="fieldset__label">Мост Дьявола
@@ -140,7 +141,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="fieldsets__item fieldsets__item--emotions fieldset">
+          <fieldset class="fieldsets__item fieldset--emotions">
             <legend class="fieldset__title title" id="emotions-title">Опишите свои эмоции:</legend>
             <textarea class="fieldset__textarea" name="comment" id="comment-field" rows="6"
               placeholder="Опишите подробно все свои восторги" aria-labelledby="emotions-title"></textarea>
@@ -152,7 +153,7 @@
         </form>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer form-footer">
       <p class="footer__hashtag title title--secondary">#visitsedona</p>
       <ul class="footer__social-list social-list">
         <li class="social-list__item">
@@ -193,7 +194,6 @@
         </a>
       </div>
     </footer>
-  </div>
   <script src="js/menu.js"></script>
 </body>
 

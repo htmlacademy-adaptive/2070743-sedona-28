@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial scale=1">
   <title>Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="/fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="body">
-  <div class="layout">
+<body class="body layout">
     <header class="header">
       <a class="navigation-logo" href="index.html">
-        <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны">
+        <img class="navigation-logo__logo" src="img/logo.svg" alt="Логотип Седоны" width="185" height="96">
       </a>
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <button class="main-nav__toggle" type="button" aria-label="открыть меню"></button>
@@ -39,7 +40,7 @@
         </ul>
       </nav>
     </header>
-    <main class="catalog-main">
+    <main class="catalog-main main">
       <section class="catalog-main__hero hero">
         <h1 class="visually-hidden">Фото и видео галерея</h1>
         <img src="img/sedona.svg" class="hero__logo hero__logo--part"
@@ -86,6 +87,9 @@
                   </div>
                   <div class="photo__likes">
                     <button class="photo__likes-button">
+                      <svg class="photo__like" width="23" height="21">
+                        <use href="img/details.svg#like-icon"></use>
+                      </svg>
                     </button>
                     <span class="photo__likes-number">1350</span>
                   </div>
@@ -123,6 +127,9 @@
                   </div>
                   <div class="photo__likes">
                     <button class="photo__likes-button">
+                      <svg class="photo__like" width="23" height="21">
+                        <use href="img/details.svg#like-icon"></use>
+                      </svg>
                     </button>
                     <span class="photo__likes-number">143</span>
                   </div>
@@ -159,6 +166,9 @@
                   </div>
                   <div class="photo__likes">
                     <button class="photo__likes-button">
+                      <svg class="photo__like" width="23" height="21">
+                        <use href="img/details.svg#like-icon"></use>
+                      </svg>
                     </button>
                     <span class="photo__likes-number">96</span>
                   </div>
@@ -194,6 +204,9 @@
                   </div>
                   <div class="photo__likes">
                     <button class="photo__likes-button">
+                      <svg class="photo__like" width="23" height="21">
+                        <use href="img/details.svg#like-icon"></use>
+                      </svg>
                     </button>
                     <span class="photo__likes-number">254</span>
                   </div>
@@ -210,10 +223,21 @@
               очередной
               раз!</p>
           </div>
+          <div class="video__wrapper">
           <a class="video__play" href="https://youtu.be/MB_iFDDNtrw">
-            <img class="video__play-picture" src="img/video.jpg" alt="button" width="280" height="177">
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/video-desktop.webp 1x, img/video-desktop@2x.webp 2x" width="800" height="500">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/video-tablet.webp 1x, img/video-tablet@2x.webp 2x" width="648" height="500">
+              <source type="image/webp" srcset="img/video-mobile.webp 1x, img/video-mobile@2x.webp 2x" width="280" height="177">
+              <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x" width="800" height="500">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x" width="648" height="500">
+              <img class="video__play-picture" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="177" alt="тур по Седоне." loading="lazy">
+            </picture>
           </a>
-          <button class="video__button" aria-label="Воспроизвести видео"></button>
+        </div>
+          <div class="video-presentation__play">
+            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="48" height="54" fill="none" viewBox="0 0 48 54"><path fill="#fff" fill-opacity=".7" d="M48 27 0 54V0l48 27Z"/></svg>
+          </div>
         </section>
       </div>
     </main>
@@ -260,7 +284,6 @@
         </div>
       </footer>
     </div>
-  </div>
   <script src="js/menu.js"></script>
 
 </body>

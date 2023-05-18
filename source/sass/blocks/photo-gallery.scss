@@ -1,6 +1,15 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
 .photo-gallery__block {
   margin: 0 auto;
   max-width: 458px;
   text-align: center;
-  padding-bottom: 25px;
+  padding: 26px 42px 25px 0;
+}
+
+.photo-gallery__title {
+  font-size: 18px;
+  margin-top: 13px;
+  margin-bottom: 24px;
 }

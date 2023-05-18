@@ -3,7 +3,8 @@
 
 .social-list {
   @include mixins.list-reset;
-  margin-bottom: 30px;
+
+  margin-bottom: 26px;
   display: flex;
 }
 
@@ -14,7 +15,11 @@
   width: 48px;
   height: 48px;
   margin-right: 6px;
-  background-color: hsl(203, 47%, 66%);
+  background-color: hsl(203deg 47% 66%);
+
+  &:last-child {
+    margin-right:0;
+  }
 }
 
 .social-list__link {
@@ -26,21 +31,22 @@
 }
 
 .social-list__link:hover {
-  background-color: hsla(203, 42%, 58%, 1);
+  background-color: hsl(203deg 42% 58% / 100%);
 }
 
 .social-list__link:active {
-  color: hsla(0, 0%, 100%, 0.3);
-  background-color: hsla(202, 44%, 54%, 1);
+  color: hsl(0deg 0% 100% / 30%);
+  background-color: hsl(202deg 44% 54% / 100%);
 }
 
 .social-list__icon {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg 0% 100%);
 }
 
 @media (min-width: variables.$tablet-width) {
   .social-list {
     margin: 0;
+    padding-left: 9px;
     display: grid;
     grid-template-columns: repeat(3, 48px);
     gap: 6px;

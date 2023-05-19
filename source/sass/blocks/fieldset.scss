@@ -57,7 +57,7 @@
   background-color: #eeeeee;
   padding: 17px 5px 37px 13px;
   margin: 26px 10px 0 11px;
-}
+
 
   &::placeholder {
     font-family: "PT Sans", "Arial", sans-serif;
@@ -239,7 +239,7 @@
   }
 
   .fieldset {
-    border-top: 2px solid hsla(0, 0%, 86%, 1);
+    border-top: 2px solid hsl(0deg 0% 86% / 100%);
     border-bottom: none;
 
     &:first-child {
@@ -295,7 +295,7 @@
   }
 
   .fieldset__textarea {
-    padding: 19px 15px 46px 15px;
+    padding: 19px 15px 46px;
     margin: 18px 49px;
   }
 }

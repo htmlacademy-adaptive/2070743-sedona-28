@@ -1,0 +1,69 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 320px;
+  height: 323px;
+  background-color:hsla(0, 0%, 100%, 1);
+  text-align: center;
+}
+
+.success__block {
+  padding: 10px 45px 10px 42px;
+}
+
+.success__outline {
+  padding: 20px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  background-color: hsla(0, 0%, 95%, 1);
+  width: 320px;
+}
+
+
+.success__button {
+  width: 280px;
+  height: 58px;
+  background-color: hsla(203, 47%, 66%, 1);
+  border: none;
+  display: block;
+  font-size: 18px;
+}
+
+.success__title {
+  margin: 0;
+}
+
+.success__description {
+  margin: 0;
+  margin-top: 25px;
+}
+
+
+@media (min-width: variables.$tablet-width) {
+  .success {
+    width: 640px;
+    height: 347px;
+  }
+
+  .success__outline {
+    margin-top: 40px;
+    min-width: 640px;
+    padding: 44px 91px 44px 91px;
+  }
+
+  .success__button {
+    min-width: 458px;
+    font-size: 21px;
+  }
+
+
+  .success__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

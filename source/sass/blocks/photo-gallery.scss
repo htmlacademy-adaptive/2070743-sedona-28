@@ -5,11 +5,23 @@
   margin: 0 auto;
   max-width: 458px;
   text-align: center;
-  padding: 26px 42px 25px 0;
+  padding: 26px 23px 25px 23px;
 }
 
 .photo-gallery__title {
   font-size: 18px;
   margin-top: 13px;
   margin-bottom: 24px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .photo-gallery__title {
+    font-size: 30px;
+    line-height: 26px;
+    margin-bottom: 32px;
+  }
+
+  .photo-gallery__block {
+    padding: 48px 14px 25px 14px;
+  }
 }

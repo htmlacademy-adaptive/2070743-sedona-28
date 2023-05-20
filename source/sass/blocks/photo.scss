@@ -22,6 +22,13 @@
 
 .photo__item {
   @include mixins.list-reset;
+  padding: 0 20px;
+  padding-top: 22px;
+  border-top: 1px solid hsla(0, 0%, 90%, 1);
+
+  &:last-child {
+    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+  }
 }
 
 .photo__img {
@@ -31,7 +38,11 @@
 }
 
 .photo__figcaption {
-  padding: 22px 0 15px;
+  padding: 19px 0 15px;
+}
+
+.photo__figcaption:first-child {
+  padding: 15px 0 15px;
 }
 
 .photo__caption {
@@ -41,7 +52,6 @@
 
   &--secondary {
     text-transform: none;
-    margin: 11px 0;
     color: hsl(0deg 0% 20%);
     font-weight: 400;
   }
@@ -61,18 +71,24 @@
 .photo__likes-button {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  width: 28px;
-  height: 31px;
+  width: 37px;
+  height: 44px;
   border: none;
   cursor: pointer;
   background-color: transparent;
+  margin-left: -5px;
+  margin-right: 5px;
 }
 
 .photo__like {
   color: #000000;
   opacity: 0.3;
+}
+
+.video__description {
+  margin-top: 27px;
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -82,8 +98,51 @@
     justify-content: space-between;
   }
 
+  .photo-list {
+    padding: 0 60px;
+  }
+
   .photo-list__item:nth-child(2n+3) {
     background-color: hsl(0deg 0% 92%);
+  }
+
+  .photo__item {
+    padding: 0;
+  }
+
+  .photo-list__item {
+    padding: 0;
+
+    &:first-child {
+      padding-top: 41px;
+    }
+  }
+
+  .photo__likes-button {
+    margin-right: 1px;
+    margin-top: -5px;
+  }
+
+  .video {
+    padding: 0 60px;
+    margin: 56px 0 40px;
+  }
+
+  .video__description {
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 73px;
+    margin-top: 31px;
+  }
+
+  .video__wrapper {
+    margin-top: 48px;
+  }
+
+  .footer__catalog {
+    padding: 0;
+    padding-top: 31px;
+    padding-bottom: 38px;
   }
 }
 
@@ -94,8 +153,8 @@
 
   .photo__figcaption {
     position: absolute;
-    bottom: 1px;
-    left: 0;
+    bottom: 5px;
+    left: 4px;
     background-color: hsl(0deg 0% 0% / 30%);
     color: hsl(0deg 0% 100% / 100%);
     width: 100%;
@@ -108,5 +167,36 @@
   .photo__like {
     color: #ffffff;
     opacity: 1;
+  }
+
+  .hero__logo--part {
+    margin-top: 102px;
+    margin-bottom: 124px;
+  }
+
+  .photo-gallery__block {
+    padding: 81px 14px 25px 14px;
+  }
+
+  .photo-list {
+    padding: 0;
+  }
+
+  .photo-list__item:first-child {
+    padding-top: 49px;
+  }
+
+  .video {
+  padding: 0;
+  margin: 58px 201px;
+  }
+
+  .video__description {
+    margin: 0 148px;
+    margin-top: 31px;
+  }
+
+  .footer__catalog {
+    padding-top: 57px;
   }
 }

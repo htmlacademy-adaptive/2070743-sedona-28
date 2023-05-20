@@ -3,11 +3,14 @@
 
 .advantages__list {
   @include mixins.list-reset;
+
+  counter-set: motive;
 }
 
 .advantages__sublist {
   @include mixins.list-reset;
-  padding: 23px 18px 46px 18px;
+
+  padding: 32px 18px 31px;
 }
 
 .advantages__item {
@@ -22,6 +25,14 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  &--eat {
+    margin-top: 34px;
+  }
+
+  &--souveniers {
+    margin-top: 33px;
+  }
 }
 
 .advantages__title {
@@ -29,14 +40,38 @@
 }
 
 .advantages__caption {
-  padding: 37px 18px 37px 18px;
+  padding: 37px 18px 24px;
+}
+
+.advantages__caption-block {
+  padding: 24px 16px 11px;
+  border-bottom: 1px solid #D6D6D6;
 }
 
 .advantages__description {
-  margin-top: 16px;
+  margin-top: 35px;
 
   &--indent {
-    margin-top: 60px;
+    margin-top: 11px;
+  }
+
+  &--indent::before {
+    counter-increment: motive;
+    content: "— №" counter(motive) " —";
+    display: block;
+    margin-bottom: 17px;
+  }
+
+  &--house {
+    margin-top: 16px;
+  }
+
+  &--eat {
+    margin-top: 15px;
+  }
+
+  &--souveniers {
+    margin-top: 16px;
   }
 }
 
@@ -44,11 +79,23 @@
   margin: 0 auto;
   max-width: 484px;
   text-align: center;
-  padding: 58px 18px 58px 18px;
+  padding: 33px 32px 37px;
+}
+
+.advantages__decor::before {
+  content: "";
+  background-color: hsl(203deg 47% 66% / 100%);
+  position: absolute;
+  top: -26px;
+  left: 0;
+  height: 27px;
+  width: 100%;
+  clip-path: polygon(0 100%, 0 45%, 50% 98%, 140% 0%, 100% 100%);
 }
 
 .advantages__picture {
   margin: 0;
+  position: relative;
 }
 
 .advantages picture {
@@ -67,9 +114,9 @@
 .advantages__subitem--house::before {
   content: "";
   position: absolute;
-  top: -11px;
-  left: -50px;
-  width: 47px;
+  top: -12px;
+  left: -47px;
+  width: 40px;
   height: 47px;
   background: url("../img/advantages.svg#house") no-repeat center;
 }
@@ -77,9 +124,9 @@
 .advantages__subitem--eat::before {
   content: "";
   position: absolute;
-  top: -11px;
-  left: -50px;
-  width: 47px;
+  top: -13px;
+  left: -47px;
+  width: 40px;
   height: 47px;
   background: url("../img/advantages.svg#eat") no-repeat center;
 }
@@ -87,16 +134,24 @@
 .advantages__subitem--souveniers::before {
   content: "";
   position: absolute;
-  top: -11px;
-  left: -50px;
-  width: 47px;
+  top: -12px;
+  left: -47px;
+  width: 40px;
   height: 47px;
   background: url("../img/advantages.svg#souveniers") no-repeat center;
+}
+
+@media (max-width: variables.$tablet-width) {
+  .advantages__subitem {
+    text-align: left;
+    margin-left: 47px;
+  }
 }
 
 @media (min-width: variables.$tablet-width) {
   .advantages__list {
     @include mixins.list-reset;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -120,7 +175,9 @@
 
   .advantages__subitem {
     position: relative;
-    margin: 170px 50px 0 50px;
+    padding: 155px 40px 40px 38px;
+    margin: 0;
+    text-align: center;
   }
 
   .advantages__picture {
@@ -129,25 +186,59 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .advantages__caption {
+    margin: 0;
+    padding: 54px 22px 10px 23px
+  }
+
+  .advantages__caption--order {
+    grid-column: 3;
+    grid-row: 1/-1;
+    padding: 51px 36px 11px 38px;
+  }
+
   .advantages__description {
-    font-size: 21px;
-    line-height: 26px;
+    margin-bottom: 20px;
+    margin-top: 29px;
+    font-size: 14px;
+    line-height: 21px;
+
+    &--indent {
+      margin-top: 15px;
+    }
+
+    &--indent::before {
+      margin-bottom: 21px;
+    }
+
+    &--house {
+      margin-top: 25px;
+    }
+
+    &--eat {
+      margin-top: 24px;
+    }
+
+    &--souveniers {
+      margin-top: 25px;
+    }
   }
 
   .advantages__title {
     margin: 0;
     font-size: 21px;
     line-height: 26px;
+
+    &--souveniers {
+      margin-top: -4px;
+    }
   }
 
   .advantages__caption-block {
-    margin: 52px 50px 52px 50px;
+    padding: 43px 49px 24px;
     font-size: 21px;
     line-height: 26px;
-  }
-
-  .advantages__caption {
-    margin: 50px 52px 50px 51px;
+    border: none;
   }
 
   .advantages__container {
@@ -157,66 +248,90 @@
   .advantages__subitem--house::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: 37%;
-    min-width: 77px;
-    min-height: 72px;
-
+    top: 17%;
+    left: 35%;
+    min-width: 76px;
+    min-height: 80px;
   }
 
   .advantages__subitem--eat::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: 37%;
+    top: 18%;
+    left: 34%;
     min-width: 80px;
-    min-height: 68px;
-
+    min-height: 70px;
   }
 
   .advantages__subitem--souveniers::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: 37%;
-    min-width: 67px;
-    min-height: 75px;
-
+    top: 18%;
+    left: 34%;
+    min-width: 87px;
+    min-height: 81px;
   }
-}
 
-@media (max-width: variables.$tablet-width) {
-  .advantages__subitem {
-    text-align: left;
-    margin-left: 47px;
+  .advantages__decor {
+    display: none;
+  }
+
+  .advantages__block {
+    max-width: 520px;
+    padding: 45px 16px 35px;
   }
 }
 
 @media (min-width: variables.$desktop-width) {
+  .advantages__subitem {
+    padding: 168px 59px 40px 57px;
+  }
+
+  .advantages__title--souveniers {
+    margin-top: 2px;
+  }
+
+  .advantages__title {
+    margin: 0 72px;
+  }
+
   .advantages__subitem--house::before {
     content: "";
     position: absolute;
-    top: -50%;
+    top: 19%;
     left: 40%;
     min-width: 79px;
-    min-height: 72px;
+    min-height: 80px;
   }
 
   .advantages__subitem--eat::before {
     content: "";
     position: absolute;
-    top: -50%;
+    top: 19%;
     left: 40%;
-    min-width: 73px;
-    min-height: 69px;
+    min-width: 79px;
+    min-height: 80px;
   }
 
   .advantages__subitem--souveniers::before {
     content: "";
     position: absolute;
-    top: -50%;
-    left: 40%;
-    min-width: 77px;
-    min-height: 75px;
+    top: 19%;
+    left: 38%;
+    min-width: 93px;
+    min-height: 83px;
+  }
+
+  .advantages__block {
+    padding: 56px 12px 43px;
+    max-width: 615px;
+}
+
+  .advantages__description {
+    margin-bottom: 4px;
+  }
+
+  .advantages__caption-block {
+    padding: 52px 49px 58px;
   }
 }

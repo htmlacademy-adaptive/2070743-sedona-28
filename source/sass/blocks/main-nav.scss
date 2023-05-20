@@ -8,6 +8,7 @@
 
 .main-nav__list {
   @include mixins.list-reset;
+
   text-align: center;
   padding-top: 56px;
 }
@@ -19,14 +20,14 @@
 .main-nav--closed .main-nav__toggle {
   z-index: 5;
   position: absolute;
-  top: 15px;
-  right: 17px;
+  top: 18px;
+  right: 18px;
   display: block;
   min-height: 25px;
   min-width: 25px;
   border: none;
   cursor: pointer;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg 0% 100%);
 
   &::before {
     content: "";
@@ -36,23 +37,23 @@
     left: 0;
     width: 23px;
     height: 4px;
-    background-color: hsl(203, 47%, 66%);
-    box-shadow: 0 8px 0 0 hsl(203, 47%, 66%), 0 16px 0 0 hsl(203, 47%, 66%);
+    background-color: hsl(203deg 47% 66%);
+    box-shadow: 0 8px 0 0 hsl(203deg 47% 66%), 0 16px 0 0 hsl(203deg 47% 66%);
   }
 
   &:hover::before {
-    background-color: hsla(203, 47%, 66%, 0.6);
+    background-color: hsl(203deg 47% 66% / 60%);
     box-shadow:
-      0 8px 0 0 hsla(203, 47%, 66%, 0.6),
-      0 16px 0 0 hsla(203, 47%, 66%, 0.6);
+      0 8px 0 0 hsl(203deg 47% 66% / 60%),
+      0 16px 0 0 hsl(203deg 47% 66% / 60%);
   }
 
 
   &:active::before {
-    background-color: hsla(203, 47%, 66%, 0.3);
+    background-color: hsl(203deg 47% 66% / 30%);
     box-shadow:
-      0 8px 0 0 hsla(203, 47%, 66%, 0.3),
-      0 16px 0 0 hsla(203, 47%, 66%, 0.3);
+      0 8px 0 0 hsl(203deg 47% 66% / 30%),
+      0 16px 0 0 hsl(203deg 47% 66% / 30%);
   }
 }
 
@@ -87,7 +88,7 @@
     left: 1px;
     width: 23px;
     height: 4px;
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0deg 0% 100%);
     transition: background-color 0.6s;
   }
 
@@ -102,17 +103,17 @@
 
   &:hover::before,
   &:hover::after {
-    background-color: hsla(0, 0%, 100%, 0.6);
+    background-color: hsl(0deg 0% 100% / 60%);
   }
 
   &:active::before,
   &:active::after {
-    background-color: hsla(0, 0%, 100%, 0.3);
+    background-color: hsl(0deg 0% 100% / 30%);
   }
 }
 
 .main-nav--nojs .main-nav__list {
-  padding-top: 56px;
+  padding-top: 90px;
   position: static;
   min-height: 100%;
   display: block;

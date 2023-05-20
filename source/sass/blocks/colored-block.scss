@@ -1,17 +1,17 @@
 @use "../common/variables.scss";
 
 .colored-block {
-  padding: 18px;
+  padding: 0 18px;
 
   &--primary {
     padding: 0;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(203, 47%, 66%);
+    color: hsl(0deg 0% 100%);
+    background-color: hsl(203deg 47% 66%);
   }
 
   &--secondary {
-    color: hsla(0, 0%, 0%, 1);
-    background-color: hsl(0, 0%, 93%);
+    color: hsl(0deg 0% 0% / 100%);
+    background-color: hsl(0deg 0% 93%);
   }
 }
 

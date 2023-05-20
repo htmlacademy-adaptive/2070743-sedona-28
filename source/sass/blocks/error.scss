@@ -1,0 +1,51 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.error {
+  padding: 53px 43px 27px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 320px;
+  min-height: 280px;
+  background-color:hsl(0deg 0% 100% / 100%);
+  text-align: center;
+}
+
+.error__button {
+  margin: 0 auto;
+  margin-top: 28px;
+  width: 180px;
+  height: 58px;
+  background-color: hsl(203deg 47% 66% / 100%);
+  border: none;
+  display: block;
+}
+
+.error__title {
+  margin: 0;
+}
+
+.error__description {
+  margin: 0;
+  margin-top: 25px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .error {
+    width: 400px;
+    height: 347px;
+    padding: 32px 43px 49px;
+  }
+
+  .error__title {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 0 34px;
+  }
+
+  .error__button {
+    width: 272px;
+    margin-top: 45px;
+  }
+}

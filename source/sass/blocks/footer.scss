@@ -1,21 +1,28 @@
+@use "../common/mixins.scss";
 @use "../common/variables.scss";
 
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 33px 0 33px 0;
+  padding: 44px 0;
+  padding-bottom: 27px;
 }
 
 .footer__hashtag {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 29px;
+}
+
+.footer__catalog {
+  padding: 29px 20px;
 }
 
 
 @media (min-width: variables.$tablet-width) {
   .footer {
-    margin-top: 64px;
+    padding-top: 22px;
+    padding-bottom: 38px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
@@ -23,5 +30,15 @@
   .footer__hashtag {
     margin: 0;
     text-align: center;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .footer {
+    padding-top: 33px;
+  }
+
+  .footer__hashtag {
+    margin-right: 24px;
   }
 }

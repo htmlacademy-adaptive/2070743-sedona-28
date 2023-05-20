@@ -4,8 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsla(203, 47%, 66%, 1);
-  color: hsla(0, 0%, 100%, 1);
+  background-color: hsl(203deg 47% 66% / 100%);
+  color: hsl(0deg 0% 100% / 100%);
   font-family: "PT Sans", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -14,17 +14,17 @@
 }
 
 .button:hover {
-  background-color: hsla(203, 42%, 58%, 1);
+  background-color: hsl(203deg 42% 58% / 100%);
 }
 
 .button:active {
-  background-color: hsla(202, 44%, 54%, 1);
-  color: hsla(0, 0%, 100%, 0.3);
+  background-color: hsl(202deg 44% 54% / 100%);
+  color: hsl(0deg 0% 100% / 30%);
 }
 
 .button:disabled {
-  background-color: hsla(0, 0%, 90%, 1);
-  color: hsla(0, 0%, 100%, 0.3);
+  background-color: hsl(0deg 0% 90% / 100%);
+  color: hsl(0deg 0% 100% / 30%);
 }
 
 
@@ -32,8 +32,8 @@
   min-width: 280px;
   display: block;
   text-decoration: none;
-  padding: 16px 49px 16px 49px;
-  color: hsla(0, 0%, 100%, 1);
+  padding: 16px 49px;
+  color: hsl(0deg 0% 100% / 100%);
   cursor: pointer;
 }
 

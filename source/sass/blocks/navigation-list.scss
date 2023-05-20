@@ -3,18 +3,18 @@
 
 
 .navigation-list__item {
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
-  border-top: 1px solid hsla(0, 0%, 100%, 0.2);
-  padding: 17px 0 12px 0;
-  background-color: hsl(203, 47%, 66%);
+  border-bottom: 1px solid hsl(0deg 0% 0% / 20%);
+  border-top: 1px solid hsl(0deg 0% 100% / 20%);
+  padding: 17px 0 12px;
+  background-color: hsl(203deg 47% 66%);
 }
 
 .navigation-list__item:hover {
-  background-color: hsl(203, 42%, 58%);
+  background-color: hsl(203deg 42% 58%);
 }
 
 .navigation-list__item:active {
-  background-color: hsl(202, 44%, 54%);
+  background-color: hsl(202deg 44% 54%);
 }
 
 .navigation-list__toggle {
@@ -31,20 +31,21 @@
 
 .navigation-list__close-img {
   cursor: pointer;
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg 0% 100%);
 
   &:hover {
-    color: hsl(0, 0%, 100%, 0.6);
+    color: hsl(0deg 0% 100% / 60%);
   }
 
   &:active {
-    color: hsl(0, 0%, 100%, 0.3);
+    color: hsl(0deg 0% 100% / 30%);
   }
 }
 
 @media (min-width: variables.$tablet-width) {
   .navigation-list {
     @include mixins.list-reset;
+
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 
@@ -56,29 +57,32 @@
   }
 
   .navigation-list__item {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0deg 0% 100%);
     border: none;
+    padding-top: 16px;
   }
 
   .navigation-list__item:hover {
-    background-color: hsl(0, 0%, 100%);
+    background-color: hsl(0deg 0% 100%);
   }
 
   .navigation-list__link {
     margin: auto;
-    padding: 17px 0 12px 0;
+    padding: 17px 0 12px;
     max-width: 240px;
+    font-size: 14px;
+    line-height: 21px;
 
     &:hover {
-      color: hsla(203, 47%, 66%, 1);
+      color: hsl(203deg 47% 66% / 100%);
     }
 
     &:active {
-      color: hsla(0, 0%, 70%, 1);
+      color: hsl(0deg 0% 70% / 100%);
     }
 
     &--current {
-      color: hsla(23, 15%, 40%, 1);
+      color: hsl(23deg 15% 40% / 100%);
     }
   }
 

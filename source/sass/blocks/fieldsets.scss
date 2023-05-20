@@ -1,19 +1,25 @@
+@use "../common/mixins.scss";
 @use "../common/variables.scss";
-
-.fieldsets__item--emotions {
-  display: flex;
-  max-width: 960px;
-  margin: 0 auto;
-}
 
 .fieldsets__submit {
   max-width: 960px;
   margin: 0 auto;
+  margin-top: 22px;
 }
 
 @media (min-width: variables.$tablet-width) {
   .fieldsets__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .fieldsets__submit {
+    margin-top: 21px;
+  }
+}
+
+@media (min-width: variables.$desktop-width) {
+  .fieldsets__submit {
+    margin-top: 29px;
   }
 }

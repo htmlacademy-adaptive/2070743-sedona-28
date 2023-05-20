@@ -1,3 +1,4 @@
+@use "../common/mixins.scss";
 @use "../common/variables.scss";
 
 .submit {
@@ -15,6 +16,8 @@
 
 .submit__small-text {
   text-align: end;
+  margin-top: 3px;
+  margin-right: 2px;
 }
 
 @media (min-width: variables.$tablet-width) {
@@ -27,10 +30,21 @@
   .submit__button {
     min-width: 324px;
   }
+
+  .submit__small-text {
+    margin-top: 23px;
+    margin-right: 0;
+    font-size: 14px;
+  }
 }
 
 @media (min-width: variables.$desktop-width) {
   .submit__button {
     min-width: 384px;
+  }
+
+  .submit {
+    justify-content: space-between;
+    padding: 0 96px;
   }
 }

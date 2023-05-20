@@ -1,0 +1,13 @@
+@use "../common/mixins.scss";
+@use "../common/variables.scss";
+
+.form-footer {
+  padding-top: 56px;
+}
+
+@media (min-width: variables.$tablet-width) {
+  .form-footer {
+    padding-top: 101px;
+    padding-bottom: 36px;
+  }
+}

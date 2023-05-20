@@ -1,21 +1,26 @@
 @use "../common/variables.scss";
 
 .video {
-  margin: 17px 0 38px 0;
+  margin-top: 17px;
+  max-width: 800px;
+  padding: 0 20px;
 }
 
 .video__block {
-  padding-bottom: 38px;
   text-align: center;
+  padding: 0 20px;
+}
+
+.video__wrapper {
+  position: relative;
+  margin-top: 39px;
 }
 
 .video__play {
-  display: flex;
   pointer-events: none;
 }
 
 .video__play-picture {
-  flex-grow: 1;
   width: 100%;
   height: 100%;
 }
@@ -24,9 +29,34 @@
   display: none;
 }
 
+.video__presentation-play {
+  width: 48px;
+  height: 54px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: variables.$tablet-width) {
   .video {
-    margin: 58px 0 40px 0;
+    margin: 58px 0 40px;
   }
 
   .video__block {
@@ -44,6 +74,6 @@
 
 @media (min-width: variables.$desktop-width) {
   .video {
-    margin: 62px 200px 84px 200px;
+    margin: 62px 200px 84px;
   }
 }

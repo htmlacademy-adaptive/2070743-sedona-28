@@ -1,18 +1,18 @@
 @use "../common/variables.scss";
 
 .link {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg 0% 100%);
   text-decoration: none;
 }
 
 .link:active {
-  color: hsla(0, 0%, 100%, 0.3);
+  color: hsl(0deg 0% 100% / 30%);
 }
 
 
 @media (min-width: variables.$tablet-width) {
   .link {
-    color: hsl(0, 0%, 0%);
+    color: hsl(0deg 0% 0%);
     text-decoration: none;
   }
 }

@@ -7,7 +7,7 @@
   justify-content: flex-end;
   width: 320px;
   height: 323px;
-  background-color:hsla(0, 0%, 100%, 1);
+  background-color:hsl(0deg 0% 100% / 100%);
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   margin-top: 40px;
   display: flex;
   justify-content: center;
-  background-color: hsla(0, 0%, 95%, 1);
+  background-color: hsl(0deg 0% 95% / 100%);
   width: 320px;
 }
 
@@ -28,7 +28,7 @@
 .success__button {
   width: 280px;
   height: 58px;
-  background-color: hsla(203, 47%, 66%, 1);
+  background-color: hsl(203deg 47% 66% / 100%);
   border: none;
   display: block;
   font-size: 18px;
@@ -53,7 +53,7 @@
   .success__outline {
     margin-top: 40px;
     min-width: 640px;
-    padding: 44px 91px 44px 91px;
+    padding: 44px 91px;
   }
 
   .success__button {

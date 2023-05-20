@@ -8,7 +8,7 @@
   justify-content: flex-end;
   min-width: 320px;
   min-height: 280px;
-  background-color:hsla(0, 0%, 100%, 1);
+  background-color:hsl(0deg 0% 100% / 100%);
   text-align: center;
 }
 
@@ -17,7 +17,7 @@
   margin-top: 28px;
   width: 180px;
   height: 58px;
-  background-color: hsla(203, 47%, 66%, 1);
+  background-color: hsl(203deg 47% 66% / 100%);
   border: none;
   display: block;
 }
@@ -35,7 +35,7 @@
   .error {
     width: 400px;
     height: 347px;
-    padding: 32px 43px 49px 43px;
+    padding: 32px 43px 49px;
   }
 
   .error__title {

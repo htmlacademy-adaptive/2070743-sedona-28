@@ -22,12 +22,13 @@
 
 .photo__item {
   @include mixins.list-reset;
+
   padding: 0 20px;
   padding-top: 22px;
-  border-top: 1px solid hsla(0, 0%, 90%, 1);
+  border-top: 1px solid hsl(0deg 0% 90% / 100%);
 
   &:last-child {
-    border-bottom: 1px solid hsla(0, 0%, 90%, 1);
+    border-bottom: 1px solid hsl(0deg 0% 90% / 100%);
   }
 }
 
@@ -42,7 +43,7 @@
 }
 
 .photo__figcaption:first-child {
-  padding: 15px 0 15px;
+  padding: 15px 0;
 }
 
 .photo__caption {
@@ -175,7 +176,7 @@
   }
 
   .photo-gallery__block {
-    padding: 81px 14px 25px 14px;
+    padding: 81px 14px 25px;
   }
 
   .photo-list {

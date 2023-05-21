@@ -7,10 +7,15 @@
   margin-top: 22px;
 }
 
+.fieldsets__container {
+  border-top: 1px solid #dbdbdb;
+}
+
 @media (min-width: variables.$tablet-width) {
   .fieldsets__container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    border-top: none;
   }
 
   .fieldsets__submit {

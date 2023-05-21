@@ -2,6 +2,7 @@
 @use "../common/variables.scss";
 
 .fieldset {
+  margin: 0;
   padding: 20px;
   border: none;
   border-bottom: 1px solid hsl(0deg 0% 86% / 100%);
@@ -26,7 +27,7 @@
   background-color: #eeeeee;
   border: none;
   padding: 16px;
-  font-family: "PT Sans", "Arial", sans-serif;
+  font-family: inherit;
   font-size: 18px;
   line-height: 26px;
   font-weight: 700;
@@ -55,12 +56,13 @@
   flex-grow: 1;
   border: none;
   background-color: #eeeeee;
-  padding: 17px 5px 37px 13px;
-  margin: 26px 10px 0 11px;
-
+  padding: 18px 5px 38px 17px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  font-family: inherit;
 
   &::placeholder {
-    font-family: "PT Sans", "Arial", sans-serif;
+    font-family: inherit;
     font-size: 18px;
     line-height: 26px;
     font-weight: 700;
